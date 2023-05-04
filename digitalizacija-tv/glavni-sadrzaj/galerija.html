@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <!-- Meta tagovi -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Napravljeno uz pomoć https://stackoverflow.com/a/54266944/14558305 i https://gist.github.com/whitingx/3840905 -->
+    <!-- Ovo je za servise kao što su Twitter, Facebook, Discord... -->
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content="http://my.site.com"> -->
+    <!-- <meta property="og:image" content="http://my.site.com/images/thumb.png"> -->
+    <meta property="og:title" content="Foto galerija">
+    <meta property="og:description" content="Pogledajte sve slike sa stranice na jednom mjestu!">
+    <meta name='og:site_name' content="Digitalizacija televizije">
+    <meta name="theme-color" content="#647d8b">
+
+
+    <!-- Importanje stylesheetova i sl. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../assets/img/tv_brown.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+ 
+    <title>Foto galerija - Digitalizacija TV</title>
+</head>
+
+<body id="galerija-gradient">
+    <ul id="glavni-sadrzaj" class="dropdown-content blue-grey lighten-4">
+        <li>
+            <a href="razlike.html" class="blue-grey-text text-darken-2 waves-effect blue-grey-hover">
+                O tehnologijama, ukratko
+            </a>
+        </li>
+        <li>
+            <a href="razlike-std.html" class="blue-grey-text text-darken-2 waves-effect blue-grey-hover">
+                Različiti standardi
+            </a>
+        </li>
+        <li>
+            <a href="timeline.html" class="blue-grey-text text-darken-2 waves-effect blue-grey-hover">
+                Timeline
+            </a>
+        </li>
+        <li>
+            <a href="galerija.html" class="blue-grey-text text-darken-2 waves-effect blue-grey-hover">
+                <b>Foto galerija</b>
+            </a>
+        </li>
+    </ul>
+
+    <div id="navbar" class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper blue-grey">
+                <div class="brand-logo">
+                    <i id="logo-tv" class="material-icons blue-grey-text text-lighten-5">live_tv</i>
+                    <a href="../index.html">
+                        <b id="logo-text" class="blue-grey text-lighten-5">Digitalizacija TV</b>
+                    </a>
+                </div>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="../index.html" class="waves-effect blue-grey-text text-lighten-5">Naslovnica</a></li>
+                    <li>
+                        <a id="glavni-sadrzaj-navbar" class="dropdown-trigger blue-grey-text text-lighten-5" class="waves-effect" data-target="glavni-sadrzaj">
+                            <b>Glavni sadržaj</b>
+                            <i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                    <li><a href="../kontakt.html" class="waves-effect blue-grey-text text-lighten-5">O stranici i kontakt</a></li>
+                </ul>
+
+                <a href="#" data-target="slide-out" class="sidenav-trigger blue-grey-text text-lighten-5">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <ul id="slide-out" class="sidenav blue-grey lighten-4">
+        <li>
+            <a class="waves-effect sidenav-close">
+                <i class="material-icons blue-grey-text text-darken-3">arrow_back</i>
+            </a>
+        </li>
+
+        <li>
+            <a class="waves-effect blue-grey-text text-darken-3" href="../index.html">
+                <i class="material-icons main-sidebar-icons blue-grey-text text-darken-3">home</i>
+                Naslovnica
+            </a>
+        </li>
+
+        <li><div class="divider blue-grey lighten-2"></div></li>
+
+        <li>
+            <a class="waves-effect blue-grey-text text-darken-3" href="razlike.html">
+                <i class="material-icons main-sidebar-icons blue-grey-text text-darken-3">swap_horiz</i>
+                O tehnologijama, ukratko
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect blue-grey-text text-darken-3" href="razlike-std.html">
+                <i class="material-icons main-sidebar-icons blue-grey-text text-darken-3">hdr_strong</i>
+                Različiti standardi
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect blue-grey-text text-darken-3" href="timeline.html">
+                <i class="material-icons main-sidebar-icons blue-grey-text text-darken-3">timeline</i>
+                Timeline
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect blue-grey-text text-darken-3" href="galerija.html">
+                <i class="material-icons main-sidebar-icons blue-grey-text text-darken-3">image</i>
+                <b>Foto galerija</b>
+            </a>
+        </li>
+
+        <li><div class="divider blue-grey lighten-2"></div></li>
+
+        <li>
+            <a class="waves-effect blue-grey-text text-darken-3" href="../kontakt.html">
+                <i class="material-icons main-sidebar-icons blue-grey-text text-darken-3">insert_drive_file</i>
+                O stranici i kontakt
+            </a>
+        </li>
+    </ul>
+
+    <div id="copy-modal" class="modal transparent">
+        <div class="modal-footer blue-grey"> <!-- "footer" je namjerno iznad glavnog sadržaja -->
+            <div class="valign-wrapper modal-winbar-container">
+                <p class="modal-winbar-title blue-grey-text text-lighten-5">
+                    <i class="tiny material-icons spin-effect">info_outline</i>
+                    Info
+                </p>
+                <div class="flex-spacer"></div>
+                <a class="modal-close waves-effect btn-flat blue-grey-text text-lighten-5">
+                    <i class="material-icons">close</i>
+                </a>
+            </div>
+        </div>
+        <div class="modal-content center blue-grey lighten-1">
+            <a title="Posjetite stranicu ICT županije" class="col s12 l5" href="https://www.ictzupanija.hr/">
+                <img id="mini-logo" alt="Logo ICT županije" src="../assets/img/logo.png">
+            </a>
+            <p class="blue-grey-text text-lighten-5">
+                &copy; <b>Luka Krešimir Mihovilović</b> i <b>ICT županija</b>, 2022.
+            </p>
+        </div>
+    </div>
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large hover-effect-alt z-depth-2 blue-grey lighten-4 waves-effect waves-circle">
+            <i class="large material-icons blue-grey-text darken-2">more_vert</i>
+        </a>
+        <ul>
+            <li>
+                <a class="btn-floating blue-grey lighten-4" href="#navbar">
+                    <i class="material-icons blue-grey-text darken-2">expand_less</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating blue-grey lighten-4 sidenav-trigger" data-target="slide-out">
+                    <i class="material-icons blue-grey-text darken-2">menu</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating blue-grey lighten-4 modal-trigger" href="#copy-modal">
+                    <i class="material-icons blue-grey-text darken-2">info</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="pozadina-gradijent">
+        <div class="container blue-grey-text text-darken-4">
+            <div class="center blue-grey lighten-4 z-depth-4 container-card" style="padding: 5vw 10vw;">
+                <h4 style="margin-bottom: 50px;">
+                    Sve slike sa stranice i atribucije!
+                </h4>
+
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card transparent z-depth-2">
+                            <div class="card-image">
+                                <img class="materialboxed" alt="Prikaz NTSC signala" title="Prikaz NTSC signala" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/NTSC_Signal.png">
+                                <a class="btn-floating halfway-fab waves-effect waves-light hover-effect-alt blue-grey" href="https://commons.wikimedia.org/w/index.php?curid=110845021" target="_blank">
+                                    <i class="material-icons">open_in_new</i>
+                                </a>
+                            </div>
+                            <div class="card-content blue-grey lighten-5">
+                                <span class="card-title">Prikaz NTSC signala</span>
+                                <p>Autor: <b>Draconichiaro</b> - Vlastiti rad, CC BY-SA 4.0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card transparent z-depth-2">
+                            <div class="card-image">
+                                <img class="materialboxed" alt="Razlika između AM i FM" title="Razlika između AM i FM" src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Amfm3-en-de.gif">
+                                <a class="btn-floating halfway-fab waves-effect waves-light hover-effect-alt blue-grey" href="https://commons.wikimedia.org/w/index.php?curid=5071748" target="_blank">
+                                    <i class="material-icons">open_in_new</i>
+                                </a>
+                            </div>
+                            <div class="card-content blue-grey lighten-5">
+                                <span class="card-title">Razlika između AM i FM</span>
+                                <p>Autor: <b>Berserkerus</b> - Vlastiti rad, CC BY-SA 2.5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card transparent z-depth-2">
+                            <div class="card-image">
+                                <img class="materialboxed" alt="Kompozitni video signal" title="Kompozitni video signal" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Video-line.svg/1920px-Video-line.svg.png">
+                                <a class="btn-floating halfway-fab waves-effect waves-light hover-effect-alt blue-grey" href="https://commons.wikimedia.org/w/index.php?curid=3195230" target="_blank">
+                                    <i class="material-icons">open_in_new</i>
+                                </a>
+                            </div>
+                            <div class="card-content blue-grey lighten-5">
+                                <span class="card-title">Kompozitni video signal</span>
+                                <p>Autor: <b>Ian Harvey</b> - Vlastiti rad, javno vlasništvo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card transparent z-depth-2">
+                            <div class="card-image">
+                                <img class="materialboxed" alt="Raster skeniranje" title="Raster skeniranje" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Raster-scan.svg/1024px-Raster-scan.svg.png">
+                                <a class="btn-floating halfway-fab waves-effect waves-light hover-effect-alt blue-grey" href="https://commons.wikimedia.org/w/index.php?curid=3195223" target="_blank">
+                                    <i class="material-icons">open_in_new</i>
+                                </a>
+                            </div>
+                            <div class="card-content blue-grey lighten-5">
+                                <span class="card-title">Raster skeniranje</span>
+                                <p>Autor: <b>Ian Harvey</b> - Vlastiti rad, javno vlasništvo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card transparent z-depth-2">
+                            <div class="card-image">
+                                <img class="materialboxed" alt="Smetnje u primanju signala" title="Smetnje u primanju signala" src="https://hackaday.com/wp-content/uploads/2021/01/analog-tv-featured.jpg">
+                                <a class="btn-floating halfway-fab waves-effect waves-light hover-effect-alt blue-grey" href="https://hackaday.com/2021/01/29/the-last-few-analogue-tv-stations-in-north-america/" target="_blank">
+                                    <i class="material-icons">open_in_new</i>
+                                </a>
+                            </div>
+                            <div class="card-content blue-grey lighten-5">
+                                <span class="card-title">Smetnje u primanju signala</span>
+                                <p>sa stranice Hackaday, artikl napravio <b>Jenny List</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card transparent z-depth-2">
+                            <div class="card-image">
+                                <img class="materialboxed" alt="Digitalna litica" title="Digitalna litica" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Digital-cliff.svg/1280px-Digital-cliff.svg.png">
+                                <a class="btn-floating halfway-fab waves-effect waves-light hover-effect-alt blue-grey" href="https://commons.wikimedia.org/w/index.php?curid=35942731" target="_blank">
+                                    <i class="material-icons">open_in_new</i>
+                                </a>
+                            </div>
+                            <div class="card-content blue-grey lighten-5">
+                                <span class="card-title">Digitalna litica</span>
+                                <p>Autor: <b>0x0077BE</b> - Vlastiti rad, CC0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card transparent z-depth-2">
+                            <div class="card-image">
+                                <img class="materialboxed" alt="ISDB-T vs NTSC" title="ISDB-T vs NTSC" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Digital_%26_Analog_TV_screen_quality_comparison-1.jpg/800px-Digital_%26_Analog_TV_screen_quality_comparison-1.jpg">
+                                <a class="btn-floating halfway-fab waves-effect waves-light hover-effect-alt blue-grey" href="https://commons.wikimedia.org/w/index.php?curid=4679327" target="_blank">
+                                    <i class="material-icons">open_in_new</i>
+                                </a>
+                            </div>
+                            <div class="card-content blue-grey lighten-5">
+                                <span class="card-title">ISDB-T vs NTSC</span>
+                                <p>Autor: <b>Namazu-tron</b> - Vlastiti rad, CC BY-SA 3.0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card transparent z-depth-2">
+                            <div class="card-image">
+                                <img class="materialboxed" alt="Smetnja digitalnom signalu" title="Smetnja digitalnom signalu" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Digital-signal-noise.svg/1280px-Digital-signal-noise.svg.png">
+                                <a class="btn-floating halfway-fab waves-effect waves-light hover-effect-alt blue-grey" href="https://commons.wikimedia.org/w/index.php?curid=108781822" target="_blank">
+                                    <i class="material-icons">open_in_new</i>
+                                </a>
+                            </div>
+                            <div class="card-content blue-grey lighten-5">
+                                <span class="card-title">Smetnja digitalnom signalu</span>
+                                <p>Autori: <b>Mcanet</b> (originalna slika), <b>Avelludo</b> (vektor verzija), CC BY-SA 4.0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card transparent z-depth-2">
+                            <div class="card-image">
+                                <img class="materialboxed" alt="Raspored standarda zemaljske TV u svijetu" title="Raspored standarda zemaljske TV u svijetu" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Digital_terrestrial_television_standards.svg/1024px-Digital_terrestrial_television_standards.svg.png">
+                                <a class="btn-floating halfway-fab waves-effect waves-light hover-effect-alt blue-grey" href="https://commons.wikimedia.org/w/index.php?curid=3456726" target="_blank">
+                                    <i class="material-icons">open_in_new</i>
+                                </a>
+                            </div>
+                            <div class="card-content blue-grey lighten-5">
+                                <span class="card-title">Raspored standarda zemaljske TV u svijetu</span>
+                                <p>Autor: <b>EnEdCEnEdC</b> - Vlastiti rad, javno vlasništvo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card transparent z-depth-2">
+                            <div class="card-image">
+                                <img class="materialboxed" alt="Logo ICT županije" title="Logo ICT županije" src="../assets/img/logo.png" style="background: rgb(64, 64, 64); padding: 10px;">
+                                <a class="btn-floating halfway-fab waves-effect waves-light hover-effect-alt blue-grey" href="https://www.ictzupanija.hr/" target="_blank">
+                                    <i class="material-icons">open_in_new</i>
+                                </a>
+                            </div>
+                            <div class="card-content blue-grey lighten-5">
+                                <span class="card-title">Logo ICT županije</span>
+                                <p>Autor: <b>ICT županija</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card transparent z-depth-2">
+                            <div class="card-image">
+                                <img class="materialboxed" alt="DVB logo" title="DVB logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Digital_Video_Broadcasting_Logo.svg/800px-Digital_Video_Broadcasting_Logo.svg.png" style="padding: 10px;">
+                                <a class="btn-floating halfway-fab waves-effect waves-light hover-effect-alt blue-grey" href="https://en.wikipedia.org/w/index.php?curid=26020320" target="_blank">
+                                    <i class="material-icons">open_in_new</i>
+                                </a>
+                            </div>
+                            <div class="card-content blue-grey lighten-5">
+                                <span class="card-title">DVB logo</span>
+                                <p>Autor: <b>DVB Project</b>, Fair Use</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card transparent z-depth-2">
+                            <div class="card-image">
+                                <img class="materialboxed" alt="ATSC logo" title="ATSC logo" src="https://upload.wikimedia.org/wikipedia/commons/2/28/Atsc-logo-500px.png" style="padding: 10px;">
+                                <a class="btn-floating halfway-fab waves-effect waves-light hover-effect-alt blue-grey" href="https://commons.wikimedia.org/w/index.php?curid=114967432" target="_blank">
+                                    <i class="material-icons">open_in_new</i>
+                                </a>
+                            </div>
+                            <div class="card-content blue-grey lighten-5">
+                                <span class="card-title">ATSC logo</span>
+                                <p>Autor: <b>Advanced Television Systems Committee</b>, javno vlasništvo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h4 style="margin-bottom: 50px;">
+                    Moje vlastite slike!
+                </h4>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card transparent z-depth-2">
+                            <div class="card-image">
+                                <img class="materialboxed" alt="Logo ICT županije" title="Logo ICT županije" src="../assets/img/noise.apng">
+                            </div>
+                            <div class="card-content blue-grey lighten-5">
+                                <span class="card-title">"Snijeg"</span>
+                                <p>
+                                    Napravljeno s programom
+                                    <a class="indigo-text" title="https://www.getpaint.net/" href="https://www.getpaint.net/" target="_blank"> 
+                                        <i class="tiny material-icons">link</i>
+                                        <u>paint.net</u>
+                                        <i class="tiny material-icons">open_in_new</i>
+                                    </a>
+                                    i servisom
+                                    <a class="indigo-text" title="https://ezgif.com/apng-maker" href="https://ezgif.com/apng-maker" target="_blank"> 
+                                        <i class="tiny material-icons">link</i>
+                                        <u>ezgif.com</u>
+                                        <i class="tiny material-icons">open_in_new</i>
+                                    </a>.
+                                    Slobodno iskoritite ovu sliku za nešto!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card transparent z-depth-2">
+                            <div class="card-image">
+                                <img class="materialboxed" alt="Logo ICT županije" title="Logo ICT županije" src="../assets/img/gina_pfp.jpg">
+                            </div>
+                            <div class="card-content blue-grey lighten-5">
+                                <span class="card-title">Gina</span>
+                                <p>Moj pas!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Integriranje Materialize JS skripte -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        // Ovo omogućuje pravilno funkcioniranje FAB elementa.
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(elems, {
+                hoverEnabled: false
+            });
+        });
+
+        // Inicijaliziranje Materializovih komponenti
+        M.AutoInit();
+    </script>
+</body>
+</html>

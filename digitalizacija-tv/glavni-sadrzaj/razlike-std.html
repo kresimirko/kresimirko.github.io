@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <!-- Meta tagovi -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Napravljeno uz pomoć https://stackoverflow.com/a/54266944/14558305 i https://gist.github.com/whitingx/3840905 -->
+    <!-- Ovo je za servise kao što su Twitter, Facebook, Discord... -->
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content="http://my.site.com"> -->
+    <!-- <meta property="og:image" content="http://my.site.com/images/thumb.png"> -->
+    <meta property="og:title" content="Različiti standardi">
+    <meta property="og:description" content="...kod digitalne televizije.">
+    <meta name='og:site_name' content="Digitalizacija televizije">
+    <meta name="theme-color" content="#5061CF">
+
+
+    <!-- Importanje stylesheetova i sl. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../assets/img/tv_brown.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+
+    <title>Različiti standardi - Digitalizacija TV</title>
+</head>
+
+<body id="razlike-std-gradient">
+    <ul id="glavni-sadrzaj" class="dropdown-content indigo lighten-4">
+        <li>
+            <a href="razlike.html" class="indigo-text text-darken-2 waves-effect indigo-hover">
+                O tehnologijama, ukratko
+            </a>
+        </li>
+        <li>
+            <a href="razlike-std.html" class="indigo-text text-darken-2 waves-effect indigo-hover">
+                <b>Različiti standardi</b>
+            </a>
+        </li>
+        <li>
+            <a href="timeline.html" class="indigo-text text-darken-2 waves-effect indigo-hover">
+                Timeline
+            </a>
+        </li>
+        <li>
+            <a href="galerija.html" class="indigo-text text-darken-2 waves-effect indigo-hover">
+                Foto galerija
+            </a>
+        </li>
+    </ul>
+
+    <div id="navbar" class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper" style="background-color: #5061CF;">
+                <div class="brand-logo">
+                    <i id="logo-tv" class="material-icons indigo-text text-lighten-5">live_tv</i>
+                    <a href="../index.html">
+                        <b id="logo-text" class="indigo-text text-lighten-5">Digitalizacija TV</b>
+                    </a>
+                </div>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="../index.html" class="waves-effect indigo-text text-lighten-5">Naslovnica</a></li>
+                    <li>
+                        <a id="glavni-sadrzaj-navbar" class="dropdown-trigger indigo-text text-lighten-5" class="waves-effect" data-target="glavni-sadrzaj">
+                            <b>Glavni sadržaj</b>
+                            <i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                    <li><a href="../kontakt.html" class="waves-effect indigo-text text-lighten-5">O stranici i kontakt</a></li>
+                </ul>
+
+                <a href="#" data-target="slide-out" class="sidenav-trigger indigo-text text-lighten-5">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <ul id="slide-out" class="sidenav indigo lighten-4">
+        <li>
+            <a class="waves-effect sidenav-close">
+                <i class="material-icons indigo-text text-darken-3">arrow_back</i>
+            </a>
+        </li>
+
+        <li>
+            <a class="waves-effect indigo-text text-darken-3" href="../index.html">
+                <i class="material-icons main-sidebar-icons indigo-text text-darken-3">home</i>
+                Naslovnica
+            </a>
+        </li>
+
+        <li><div class="divider indigo lighten-2"></div></li>
+
+        <li>
+            <a class="waves-effect indigo-text text-darken-3" href="razlike.html">
+                <i class="material-icons main-sidebar-icons indigo-text text-darken-3">swap_horiz</i>
+                O tehnologijama, ukratko
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect indigo-text text-darken-3" href="razlike-std.html">
+                <i class="material-icons main-sidebar-icons indigo-text text-darken-3">hdr_strong</i>
+                <b>Različiti standardi</b>
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect indigo-text text-darken-3" href="timeline.html">
+                <i class="material-icons main-sidebar-icons indigo-text text-darken-3">timeline</i>
+                Timeline
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect indigo-text text-darken-3" href="galerija.html">
+                <i class="material-icons main-sidebar-icons indigo-text text-darken-3">image</i>
+                Foto galerija
+            </a>
+        </li>
+
+        <li><div class="divider indigo lighten-2"></div></li>
+
+        <li>
+            <a class="waves-effect indigo-text text-darken-3" href="../kontakt.html">
+                <i class="material-icons main-sidebar-icons indigo-text text-darken-3">insert_drive_file</i>
+                O stranici i kontakt
+            </a>
+        </li>
+    </ul>
+
+    <div id="copy-modal" class="modal transparent">
+        <div class="modal-footer indigo"> <!-- "footer" je namjerno iznad glavnog sadržaja -->
+            <div class="valign-wrapper modal-winbar-container">
+                <p class="modal-winbar-title indigo-text text-lighten-5">
+                    <i class="tiny material-icons">info_outline</i>
+                    Info
+                </p>
+                <div class="flex-spacer"></div>
+                <a class="modal-close waves-effect btn-flat indigo-text text-lighten-5">
+                    <i class="material-icons">close</i>
+                </a>
+            </div>
+        </div>
+        <div class="modal-content center indigo lighten-1">
+            <a title="Posjetite stranicu ICT županije" class="col s12 l5" href="https://www.ictzupanija.hr/">
+                <img id="mini-logo" alt="Logo ICT županije" src="../assets/img/logo.png">
+            </a>
+            <p class="indigo-text text-lighten-5">
+                &copy; <b>Luka Krešimir Mihovilović</b> i <b>ICT županija</b>, 2022.
+            </p>
+        </div>
+    </div>
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large hover-effect-alt z-depth-2 indigo lighten-4 waves-effect waves-circle">
+            <i class="large material-icons indigo-text darken-2">more_vert</i>
+        </a>
+        <ul>
+            <li>
+                <a class="btn-floating indigo lighten-4" href="#navbar">
+                    <i class="material-icons indigo-text darken-2">expand_less</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating indigo lighten-4 sidenav-trigger" data-target="slide-out">
+                    <i class="material-icons indigo-text darken-2">menu</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating indigo lighten-4 modal-trigger" href="#copy-modal">
+                    <i class="material-icons indigo-text darken-2">info</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="pozadina-gradijent">
+        <div class="container indigo-text text-darken-4">
+            <div class="center indigo lighten-4 z-depth-4 container-card">
+                <ul class="tabs indigo-tabs transparent" style="margin-bottom: 20px;">
+                    <li class="tab col s3">
+                        <a class="indigo-text text-darken-2" href="#std">
+                            Standardi
+                        </a>
+                    </li>
+                    <li class="tab col s3">
+                        <a class="indigo-text text-darken-2" href="#izvori">
+                            Izvori
+                        </a>
+                    </li>
+                </ul>
+
+
+                <div id="std" class="container">
+                    <p class="big-p">
+                        Pet glavnih standarda emitiranja kod digitalne televizije preko svijeta su
+                        <b>DVB</b>, <b>ATSC</b>, <b>ISDB</b>, <b>DTMB</b> i <b>DMB</b>.
+                    </p>
+                    <div>
+                        <img class="materialboxed" alt="Raspored standarda zemaljske TV u svijetu"
+                             title="Raspored standarda zemaljske TV u svijetu"
+                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Digital_terrestrial_television_standards.svg/1024px-Digital_terrestrial_television_standards.svg.png">
+                        <p><i>Raspored standarda zemaljske televizije u svijetu.</i></p>
+                    </div>
+
+                    <h3 id="dvb">DVB</h3>
+                    <p class="big-p">
+                        <b>Digital Video Broadcasting</b> je skup međunarodnih otvorenih standarda za digitalnu televiziju.
+                        DVB standarde održava DVB Project.
+                    </p>
+                    <div class="row">
+                        <div class="col s12 m6 offset-m3">
+                            <img class="materialboxed" alt="DVB logo" title="DVB logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Digital_Video_Broadcasting_Logo.svg/800px-Digital_Video_Broadcasting_Logo.svg.png" style="padding: 10px;">
+                        </div>
+                    </div>
+                    <ul id="dvb-substd" class="collapsible z-depth-2">
+                        <li>
+                            <div class="collapsible-header indigo lighten-1">
+                                <a class="indigo-text text-lighten-5">Substandardi</a>
+                            </div>
+                            <div class="collapsible-body indigo lighten-1 indigo-text text-lighten-5 indigo-text text-lighten-5">
+                                <p>
+                                    <h5><i>DVB-T</i></h5>
+                                        <h6>DVB-T2</h6>
+                                    <h5><i>DVB-S</i></h5>
+                                        <h6>DVB-S2</h6>
+                                        <h6>DVB-S2X</h6>
+                                    <h5><i>DVB-C</i></h5>
+                                        <h6>DVB-C2</h6>
+                                    <h5><i>DVB-H</i></h5>
+                                        <h6>DVB-NGH</h6>
+                                        <h6>DVB-T2-Lite</h6>
+                                        <h6>DVB-SH</h6>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h3 id="atsc">ATSC</h3>
+                    <p class="big-p">
+                        <b>Advanced Television Systems Committee</b> je američki skup standarda za digitalni televizijski prijenos preko zemaljskih,
+                        kabelskih i satelitskih mreža.
+                    </p>
+                    <div class="row">
+                        <div class="col s12 m6 offset-m3">
+                            <img class="materialboxed" alt="ATSC logo" title="ATSC logo" src="https://upload.wikimedia.org/wikipedia/commons/2/28/Atsc-logo-500px.png" style="padding: 10px;">
+                        </div>
+                    </div>
+                    <ul id="atsc-substd" class="collapsible z-depth-2">
+                        <li>
+                            <div class="collapsible-header indigo lighten-1">
+                                <a class="indigo-text text-lighten-5">Substandardi</a>
+                            </div>
+                            <div class="collapsible-body indigo lighten-1 indigo-text text-lighten-5 indigo-text text-lighten-5">
+                                <p>
+                                    <h5><i>ATSC (zemaljska/kabelska/satelitska)</i></h5>
+                                        <h6>ATSC 2.0</h6>
+                                        <h6>ATSC 3.0</h6>
+                                    <h5><i>ATSC-M/H</i></h5>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h3 id="isdb">ISDB</h3>
+                    <p class="big-p">
+                        <b>Integrated Services Digital Broadcasting</b> je japanski standard emitiranja za digitalnu televiziju i digitalni radio.
+                    </p>
+                    <ul id="isdb-substd" class="collapsible z-depth-2">
+                        <li>
+                            <div class="collapsible-header indigo lighten-1">
+                                <a class="indigo-text text-lighten-5">Substandardi</a>
+                            </div>
+                            <div class="collapsible-body indigo lighten-1 indigo-text text-lighten-5 indigo-text text-lighten-5">
+                                <p>
+                                    <h5><i>ISDB-T</i></h5>
+                                        <h6>SBTVD / ISDB-T International</h6>
+                                        <h6>1seg: ISDB-Tmm</h6>
+                                        <h6>1seg: ISDB-Tsb</h6>
+                                    <h5><i>ISDB-S</i></h5>
+                                        <h6>ISDB-S3</h6>
+                                    <h5><i>ISDB-C</i></h5>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h3 id="dtmb">DTMB</h3>
+                    <p class="big-p">
+                        <b>Digital Terrestrial Multimedia Broadcast</b> je digitalni TV standard za mobilne i fiksne uređaje, razvijen u
+                        Narodnoj Republici Kini. Koristi se tamo i u obje njihove posebne administrativne regije (Hong Kong i Makao), te
+                        također u Kambodži, Komorima, Kubi, Istočnom Timoru, Laosu i Pakistanu.
+                    </p>
+                    <ul id="dtmb-substd" class="collapsible z-depth-2">
+                        <li>
+                            <div class="collapsible-header indigo lighten-1">
+                                <a class="indigo-text text-lighten-5">Substandardi</a>
+                            </div>
+                            <div class="collapsible-body indigo lighten-1 indigo-text text-lighten-5 indigo-text text-lighten-5">
+                                <p>
+                                    <h5><i>DTMB (zemaljska)</i></h5>
+                                        <h6>DTMB-A</h6>
+                                    <h5><i>CMMB</i></h5>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h3 id="dmb">DMB</h3>
+                    <p class="big-p">
+                        <b>Digital multimedia broadcasting</b> je tehnologija digitalnog radio prijenosa razvijena u Južnoj Koreji kao dio
+                        nacionalnog IT projekta za slanje multimedije kao što su TV, radio i prijenos podataka na mobilne uređaje kao što
+                        su mobilni telefoni, prijenosna računala i GPS navigacijski sustavi.
+                    </p>
+                    <ul id="dmb-substd" class="collapsible z-depth-2">
+                        <li>
+                            <div class="collapsible-header indigo lighten-1">
+                                <a class="indigo-text text-lighten-5">Substandardi</a>
+                            </div>
+                            <div class="collapsible-body indigo lighten-1 indigo-text text-lighten-5 indigo-text text-lighten-5">
+                                <p>
+                                    <h5><i>T-DMB</i></h5>
+                                    <h5><i>S-DMB</i></h5>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div id="izvori" class="container">
+                    <p class="big-p">Izvori slika i podataka.</p>
+
+                    <a class="indigo-text" href="https://en.wikipedia.org/wiki/Analog_television"
+                       title='"Digital television transition" na Wikipediji' target="_blank">
+                        <i class="tiny material-icons">link</i>
+                        <u>"Analog television" na Wikipediji</u>
+                        <i class="tiny material-icons">open_in_new</i>
+                    </a>
+                    <br>
+                    <a class="indigo-text" href="https://en.wikipedia.org/wiki/Digital_television"
+                       title='"Digital television transition" na Wikipediji' target="_blank">
+                        <i class="tiny material-icons">link</i>
+                        <u>"Digital television" na Wikipediji</u>
+                        <i class="tiny material-icons">open_in_new</i>
+                    </a>
+                    <br>
+                    <a class="indigo-text" href="https://en.wikipedia.org/wiki/Digital_Video_Broadcasting"
+                       title='"Digital television transition" na Wikipediji' target="_blank">
+                        <i class="tiny material-icons">link</i>
+                        <u>"Digital Video Broadcasting" na Wikipediji</u>
+                        <i class="tiny material-icons">open_in_new</i>
+                    </a>
+                    <br>
+                    <a class="indigo-text" href="https://en.wikipedia.org/wiki/ATSC_standards"
+                       title='"Digital television transition" na Wikipediji' target="_blank">
+                        <i class="tiny material-icons">link</i>
+                        <u>"ATSC standards" na Wikipediji</u>
+                        <i class="tiny material-icons">open_in_new</i>
+                    </a>
+                    <br>
+                    <a class="indigo-text" href="https://en.wikipedia.org/wiki/ISDB"
+                       title='"Digital television transition" na Wikipediji' target="_blank">
+                        <i class="tiny material-icons">link</i>
+                        <u>"ISDB" na Wikipediji</u>
+                        <i class="tiny material-icons">open_in_new</i>
+                    </a>
+                    <br>
+                    <a class="indigo-text" href="https://en.wikipedia.org/wiki/Digital_Terrestrial_Multimedia_Broadcast"
+                       title='"Digital television transition" na Wikipediji' target="_blank">
+                        <i class="tiny material-icons">link</i>
+                        <u>"Digital Terrestrial Multimedia Broadcast" na Wikipediji</u>
+                        <i class="tiny material-icons">open_in_new</i>
+                    </a>
+                    <br>
+                    <a class="indigo-text" href="https://en.wikipedia.org/wiki/Digital_multimedia_broadcasting"
+                       title='"Digital television transition" na Wikipediji' target="_blank">
+                        <i class="tiny material-icons">link</i>
+                        <u>"Digital multimedia broadcasting" na Wikipediji</u>
+                        <i class="tiny material-icons">open_in_new</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Integriranje Materialize JS skripte -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        // Inicijaliziranje Materializovih komponenti
+        M.AutoInit();
+
+        // Ovo omogućuje pravilno funkcioniranje FAB elementa.
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(elems, {
+                hoverEnabled: false
+            });
+        });
+    </script>
+</body>
+</html>

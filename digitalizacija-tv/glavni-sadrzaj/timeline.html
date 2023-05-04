@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <!-- Meta tagovi -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Napravljeno uz pomoć https://stackoverflow.com/a/54266944/14558305 i https://gist.github.com/whitingx/3840905 -->
+    <!-- Ovo je za servise kao što su Twitter, Facebook, Discord... -->
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content="http://my.site.com"> -->
+    <!-- <meta property="og:image" content="http://my.site.com/images/thumb.png"> -->
+    <meta property="og:title" content="Timeline">
+    <meta property="og:description" content="Planirani datumi za prelazak na DTV za određena područja svijeta.">
+    <meta name='og:site_name' content="Digitalizacija televizije">
+    <meta name="theme-color" content="#101010">
+
+
+    <!-- Importanje stylesheetova i sl. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../assets/img/tv_brown.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+
+    <title>Timeline - Digitalizacija TV</title>
+</head>
+
+<body id="timeline-body">
+    <ul id="glavni-sadrzaj" class="dropdown-content grey lighten-4">
+        <li>
+            <a href="razlike.html" class="grey-text text-darken-2 waves-effect">
+                O tehnologijama, ukratko
+            </a>
+        </li>
+        <li>
+            <a href="razlike-std.html" class="grey-text text-darken-2 waves-effect">
+                Različiti standardi
+            </a>
+        </li>
+        <li>
+            <a class="grey-text text-darken-2 waves-effect">
+                <b>Timeline</b>
+            </a>
+        </li>
+        <li>
+            <a href="galerija.html" class="grey-text text-darken-2 waves-effect">
+                Foto galerija
+            </a>
+        </li>
+    </ul>
+
+    <div id="navbar" class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper" style="background-color: rgb(16, 16, 16);">
+                <div class="brand-logo">
+                    <i id="logo-tv" class="material-icons" style="color: rgb(220, 220, 220);">live_tv</i>
+                    <a href="../index.html" style="color: rgb(220, 220, 220);">
+                        <b id="logo-text">Digitalizacija TV</b>
+                    </a>
+                </div>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="../index.html" class="waves-effect" style="color: rgb(220, 220, 220);">Naslovnica</a></li>
+                    <li>
+                        <a id="glavni-sadrzaj-navbar" class="dropdown-trigger" class="waves-effect" style="color: rgb(220, 220, 220);" data-target="glavni-sadrzaj">
+                            <b>Glavni sadržaj</b>
+                            <i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                    <li><a href="../kontakt.html" class="waves-effect" style="color: rgb(220, 220, 220);">O stranici i kontakt</a></li>
+                </ul>
+
+                <a href="#" data-target="slide-out" class="sidenav-trigger" style="color: rgb(220, 220, 220);">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <ul id="slide-out" class="sidenav grey lighten-2">
+        <li>
+            <a class="waves-effect sidenav-close">
+                <i class="material-icons grey-text text-darken-2">arrow_back</i>
+            </a>
+        </li>
+
+        <li>
+            <a class="waves-effect grey-text text-darken-3" href="../index.html">
+                <i class="material-icons main-sidebar-icons grey-text text-darken-3">home</i>
+                Naslovnica
+            </a>
+        </li>
+
+        <li><div class="divider grey"></div></li>
+
+        <li>
+            <a class="waves-effect grey-text text-darken-3" href="razlike.html">
+                <i class="material-icons main-sidebar-icons grey-text text-darken-3">swap_horiz</i>
+                O tehnologijama, ukratko
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect grey-text text-darken-3" href="razlike-std.html">
+                <i class="material-icons main-sidebar-icons grey-text text-darken-3">hdr_strong</i>
+                Različiti standardi
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect grey-text text-darken-3" href="timeline.html">
+                <i class="material-icons main-sidebar-icons grey-text text-darken-3">timeline</i>
+                <b>Timeline</b>
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect grey-text text-darken-3" href="galerija.html">
+                <i class="material-icons main-sidebar-icons grey-text text-darken-3">image</i>
+                Foto galerija
+            </a>
+        </li>
+
+        <li><div class="divider grey"></div></li>
+
+        <li>
+            <a class="waves-effect grey-text text-darken-3" href="../kontakt.html">
+                <i class="material-icons main-sidebar-icons grey-text text-darken-3">insert_drive_file</i>
+                O stranici i kontakt
+            </a>
+        </li>
+    </ul>
+
+    <div id="copy-modal" class="modal transparent">
+        <div class="modal-footer grey darken-2"> <!-- "footer" je namjerno iznad glavnog sadržaja -->
+            <div class="valign-wrapper modal-winbar-container">
+                <p class="modal-winbar-title grey-text text-lighten-5">
+                    <i class="tiny material-icons">info_outline</i>
+                    Info
+                </p>
+                <div class="flex-spacer"></div>
+                <a class="modal-close waves-effect btn-flat grey-text text-lighten-5">
+                    <i class="material-icons">close</i>
+                </a>
+            </div>
+        </div>
+        <div class="modal-content center grey darken-1">
+            <a title="Posjetite stranicu ICT županije" class="col s12 l5" href="https://www.ictzupanija.hr/">
+                <img id="mini-logo" alt="Logo ICT županije" src="../assets/img/logo.png">
+            </a>
+            <p class="grey-text text-lighten-5">
+                &copy; <b>Luka Krešimir Mihovilović</b> i <b>ICT županija</b>, 2022.
+            </p>
+        </div>
+    </div>
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large hover-effect-alt z-depth-2 lighten-4 waves-effect waves-circle" style="background-color: rgb(200, 200, 200);">
+            <i class="large material-icons" style="color: rgb(64, 64, 64);">more_vert</i>
+        </a>
+        <ul>
+            <li>
+                <a class="btn-floating" href="#" style="background-color: rgb(200, 200, 200);">
+                    <i class="large material-icons" style="color: rgb(64, 64, 64);">expand_less</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating sidenav-trigger" data-target="slide-out" style="background-color: rgb(200, 200, 200);">
+                    <i class="large material-icons" style="color: rgb(64, 64, 64);">menu</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating modal-trigger" href="#copy-modal" style="background-color: rgb(200, 200, 200);">
+                    <i class="large material-icons" style="color: rgb(64, 64, 64);">info</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <div class="container">
+            <h1 id="big-title" class="grey-text">Timeline</h1>
+            <h5 class="grey-text">Planirani datumi za prelazak na DTV za određena područja svijeta.</h5>
+            <ul class="collapsible tl-collapsible z-depth-4">
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey darken-1" style="border-radius: 25px 25px 0px 0px;">
+                        <a class="grey-text text-lighten-5">1996.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey darken-1 grey-text text-lighten-5 grey-text text-lighten-5">
+                       <p><b>Nizozemska</b> (satelitski servisi)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey">
+                        <a class="grey-text text-darken-4">1998.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey grey-text text-darken-4">
+                       <p><b>Ujedinjeno Kraljevstvo</b> (digitalan zemaljski servis)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey darken-1">
+                        <a class="grey-text text-lighten-5">1999.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey darken-1 grey-text text-lighten-5">
+                       <p><b>Rusija</b> (satelitski servisi)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey">
+                        <a class="grey-text text-darken-4">2001.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey grey-text text-darken-4">
+                       <p><b>Ujedinjeno Kraljevstvo/Republika Irska</b> (satelitski servisi)</p>
+                       <p><b>Malezija</b> (kabelska televizija)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey darken-1">
+                        <a class="grey-text text-lighten-5">2002.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey darken-1 grey-text text-lighten-5">
+                        <p><b>Farski otoci</b></p>
+                        <p><b>Malezija</b> (satelitski servisi)</p>
+                        <p><b>Albanija</b> (satelitski servisi)</p>
+                        <p><b>Norveška</b> (satelitski servisi)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey">
+                        <a class="grey-text text-darken-4">2004.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey grey-text text-darken-4">
+                        <p><b>Švedska</b> (satelitski servisi)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey darken-1">
+                        <a class="grey-text text-lighten-5">2005.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey darken-1 grey-text text-lighten-5">
+                        <p><b>Italija</b> (satelitski servisi)</p>
+                        <p><b>Indonezija</b> (satelitski servisi)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey">
+                        <a class="grey-text text-darken-4">2006.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey grey-text text-darken-4">
+                        <p><b>Turska</b> (satelitski servisi)</p>
+                        <p><b>Kina</b> (satelitski servisi)</p>
+                        <p><b>Luksemburg</b></p>
+                        <p><b>Nizozemska</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey darken-1">
+                        <a class="grey-text text-lighten-5">2007.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey darken-1 grey-text text-lighten-5">
+                        <p><b>Finska</b></p>
+                        <p><b>Andora</b></p>
+                        <p><b>Švedska</b></p>
+                        <p><b>Švicarska</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey">
+                        <a class="grey-text text-darken-4">2008.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey grey-text text-darken-4">
+                        <p><b>Njemačka</b></p>
+                        <p><b>Belgija</b> (Flandrija)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey darken-1">
+                        <a class="grey-text text-lighten-5">2009.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey darken-1 grey-text text-lighten-5">
+                        <p><b>Sjedinjene Američke Države</b> (stanice s punom snagom)</p>
+                        <p><b>Otok Man</b></p>
+                        <p><b>Danska</b></p>
+                        <p><b>Norveška</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey">
+                        <a class="grey-text text-darken-4">2010.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey grey-text text-darken-4">
+                        <p><b>Belgija</b> (Valonija)</p>
+                        <p class="orange-text text-accent-1"><b>Hrvatska</b></p>
+                        <p><b>Estonija</b></p>
+                        <p><b>Guernsey</b></p>
+                        <p><b>Jersey</b></p>
+                        <p><b>Japan</b> (samo sjeveroistočna prefektura Ishikawa)</p>
+                        <p><b>Latvija</b></p>
+                        <p><b>Luksemburg</b> (kabelska i satelitska televizija)</p>
+                        <p><b>San Marino</b></p>
+                        <p><b>Slovenija</b></p>
+                        <p><b>Španjolska</b></p>
+                        <p><b>Ujedinjeno Kraljevstvo</b> (Wales)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey darken-1">
+                        <a class="grey-text text-lighten-5">2011.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey darken-1 grey-text text-lighten-5">
+                        <p><b>Austrija</b></p>
+                        <p><b>Kanada</b> (glavna tržišta)</p>
+                        <p><b>Ciprus</b></p>
+                        <p><b>Francuska</b></p>
+                        <p><b>Izrael</b></p>
+                        <p><b>Japan</b> (osim Tōhoku prefektura pogođenih potresom 2011. godine)</p>
+                        <p><b>Malta</b></p>
+                        <p><b>Monako</b></p>
+                        <p><b>Ujedinjeno Kraljevstvo</b> (Škotska)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey">
+                        <a class="grey-text text-darken-4">2012.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey grey-text text-darken-4">
+                        <p><b>Češka Republika</b></p>
+                        <p><b>Gibraltar</b></p>
+                        <p><b>Njemačka</b> (satelitski servisi)</p>
+                        <p><b>Monako</b></p>
+                        <p><b>Republika Irska</b> (zemaljska televizija)</p>
+                        <p><b>Italija</b></p>
+                        <p><b>Japan</b> (Fukushima, Iwate, Miyagi prefekture)</p>
+                        <p><b>Lituanija</b></p>
+                        <p><b>Saudi Arabija</b></p>
+                        <p><b>Katar</b></p>
+                        <p><b>Ujedinjeni Arapski Emirati</b></p>
+                        <p><b>Jordan</b></p>
+                        <p><b>Bahrein</b></p>
+                        <p><b>Portugal</b></p>
+                        <p><b>Slovačka</b></p>
+                        <p><b>Južna Koreja</b></p>
+                        <p><b>Tajvan</b></p>
+                        <p><b>Ujedinjeno Kraljevstvo</b> (Engleska i Sjeverna Irska)</p>
+                        <p><b>Vatikan</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey darken-1">
+                        <a class="grey-text text-lighten-5">2013.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey darken-1 grey-text text-lighten-5">
+                        <p><b>Australija</b> (uključujući Božićni otok i Kokosove otoke)</p>
+                        <p><b>Azerbejdžan</b></p>
+                        <p><b>Bugarska</b></p>
+                        <p><b>Mađarska</b></p>
+                        <p><b>Sjeverna Makedonija</b></p>
+                        <p><b>Mauricijus</b></p>
+                        <p><b>Novi Zeland</b></p>
+                        <p><b>Poljska</b></p>
+                        <p><b>Ujedinjeno Kraljevstvo</b> (kabelska televizija)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey">
+                        <a class="grey-text text-darken-4">2014.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey grey-text text-darken-4">
+                        <p><b>Srbija</b></p>
+                        <p><b>Island</b></p>
+                        <p><b>Namibija</b></p>
+                        <p><b>Alžir</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey darken-1">
+                        <a class="grey-text text-lighten-5">2015.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey darken-1 grey-text text-lighten-5">
+                        <p><b>Bjelorusija</b></p>
+                        <p><b>Brunej</b></p>
+                        <p><b>Grčka</b></p>
+                        <p><b>Iran</b></p>
+                        <p><b>Moroko</b> (pojas ultravisoke frekvencije)</p>
+                        <p><b>Meksiko</b></p>
+                        <p><b>Moldavija</b></p>
+                        <p><b>Rumunjska</b> (pojas ultravisoke frekvencije)</p>
+                        <p><b>Ruanda</b></p>
+                        <p><b>Kenija</b></p>
+                        <p><b>Uganda</b></p>
+                        <p><b>Gana</b></p>
+                        <p><b>Armenija</b></p>
+                        <p><b>Gruzija</b></p>
+                        <p><b>Sjedinjene Američke Države</b> (stanice A klase male snage)</p>
+                        <p><b>Mongolija</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey">
+                        <a class="grey-text text-darken-4">2016.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey grey-text text-darken-4">
+                        <p><b>Bermuda</b></p>
+                        <p><b>Brazil</b> (Federalni okrug i grad Rio Verde, Goiás)</p>
+                        <p><b>Čile</b></p>
+                        <p><b>Kina</b> (CCTV)</p>
+                        <p><b>Burundi</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey darken-1">
+                        <a class="grey-text text-lighten-5">2017.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey darken-1 grey-text text-lighten-5">
+                        <p><b>Brazil</b> (nekoliko metropolitanskih područja, kao što su São Paulo, Rio de Janeiro itd.)</p>
+                        <p><b>Filipini</b> (Light Network)</p>
+                        <p><b>Rumunjska</b> (faza 2)</p>
+                        <p><b>Njemačka</b> (Unitymedia)</p>
+                        <p><b>Kirgistan</b></p>
+                        <p><b>Brunej</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey">
+                        <a class="grey-text text-darken-4">2018.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey grey-text text-darken-4">
+                        <p><b>Brazil</b> (glavna tržišta, uključujući sva tržišta u Rio de Janeiru)</p>
+                        <p><b>Rumunjska</b> (pojas ultravisoke frekvencije)</p>
+                        <p><b>Rusija</b> (prva dva Multiplex kanala, Tver regija)</p>
+                        <p><b>Tajland</b> (većina kanala)</p>
+                        <p><b>Ukrajina</b> (većina kanala)</p>
+                        <p><b>Uzbekistan</b></p>
+                        <p><b>Philippines</b> (RJ TV/2nd Avenue, Net 25 i 3ABN/Hope Channel Philippines)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey darken-1">
+                        <a class="grey-text text-lighten-5">2019.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey darken-1 grey-text text-lighten-5">
+                        <p><b>Republika Irska</b> (kabelska televizija)</p>
+                        <p><b>Rusija</b> (prva dva Multiplex kanala, više regija)</p>
+                        <p><b>Sjeverni Cipar</b></p>
+                        <p><b>Singapur</b></p>
+                        <p><b>Indija</b> (faza 1)</p>
+                        <p><b>Moldavija</b> (Pridnjestrovlje)</p>
+                        <p><b>Butan</b> (kabelska televizija)</p>
+                        <p><b>Peru</b> (Lima i Callao)</p>
+                        <p><b>Kostarika</b></p>
+                        <p><b>Malezija</b> (zemaljska televizija)</p>
+                        <p><b>Philippines</b> (ETC/SBN 21)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey">
+                        <a class="grey-text text-darken-4">2020.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey grey-text text-darken-4">
+                        <p><b>Brazil</b> (ostala tržišta)</p>
+                        <p><b>Moroko</b> (pojas ultravisoke frekvencije)</p>
+                        <p><b>Hong Kong</b></p>
+                        <p><b>Tajland</b> (Channel 3)</p>
+                        <p><b>Venezuela</b></p>
+                        <p><b>Brazil</b> (ostali teritoriji)</p>
+                        <p><b>Sudan</b></p>
+                        <p><b>Obala Bjelokosti</b></p>
+                        <p><b>Vijetnam</b></p>
+                        <p><b>Laos</b></p>
+                        <p><b>Pakistan</b></p>
+                        <p><b>Senegal</b></p>
+                        <p><b>Južna Afrika</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey darken-1">
+                        <a class="grey-text text-lighten-5">2021.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey darken-1 grey-text text-lighten-5">
+                        <p><b>Dominikanska Republika</b></p>
+                        <p><b>Kina (regionalne stanice)</b></p>
+                        <p><b>Sjedinjene Američke Države</b> (stanice male snage osim na Aljasci)</p>
+                        <p><b>Indija (druga faza)</b></p>
+                        <p><b>Kolumbija</b></p>
+                        <p><b>Argentina</b></p>
+                        <p><b>Kazahstan</b></p>
+                        <p><b>Paragvaj</b></p>
+                        <p><b>Panama (Panama, Colón i Panamá Oeste)</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey">
+                        <a class="grey-text text-darken-4">2022.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey grey-text text-darken-4">
+                        <p><b>Bocvana</b> (preostali lokaliteti)</p>
+                        <p><b>Kanada</b> (preostala tržišta)</p>
+                        <p><b>El Salvador</b></p>
+                        <p><b>Indonezija</b> (zemaljska televizija)</p>
+                        <p><b>Filipini</b> (BEAM TV)</p>
+                        <p><b>Južna Afrika</b></p>
+                        <p><b>Sjedinjene Američke Države</b> (stanice male snage na Aljasci)</p>
+                        <p><b>Rusija/Ukrajina</b> (završna faza)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey darken-1">
+                        <a class="grey-text text-lighten-5">2023.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey darken-1 grey-text text-lighten-5">
+                        <p><b>Kambodža</b></p>
+                        <p><b>Jamajka</b></p>
+                        <p><b>Filipini</b> (preostala tržišta)</p>
+                        <p><b>Indija</b> (posljednja faza)</p>
+                        <p><b>Peru</b> (ostatak zemlje)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey">
+                        <a class="grey-text text-darken-4">2024.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey grey-text text-darken-4">
+                        <p><b>Brazil</b> (ruralna područja)</p>
+                        <p><b>Čile</b></p>
+                        <p><b>Kuba</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey darken-1">
+                        <a class="grey-text text-lighten-5">2025.</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey darken-1 grey-text text-lighten-5">
+                        <p><b>Bolivija</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header grey">
+                        <a class="grey-text text-darken-4">Više datuma</a>
+                    </div>
+                    <div class="collapsible-body tl-collapsible-body grey grey-text text-darken-4">
+                        <p><b>Etiopija</b></p>
+                        <p><b>Angola</b></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header tl-collapsible-header indigo lighten-5" style="border-radius: 0px 0px 25px 25px;">
+                        <a class="indigo-text" href="https://en.wikipedia.org/wiki/Digital_television_transition"
+                           title='"Digital television transition" na Wikipediji' target="_blank" style="display: flex;"> 
+                            <i class="tiny material-icons">link</i>
+                            <u>Informacije s Wikipedije</u>
+                            <i class="tiny material-icons">open_in_new</i>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Integriranje Materialize JS skripte -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        // Inicijaliziranje Materializovih komponenti
+        M.AutoInit();
+
+        // Ovo omogućuje pravilno funkcioniranje FAB elementa.
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(elems, {
+                hoverEnabled: false
+            });
+        });
+    </script>
+</body>
+</html>

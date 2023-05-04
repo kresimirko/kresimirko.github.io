@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <!-- Meta tagovi -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Napravljeno uz pomoć https://stackoverflow.com/a/54266944/14558305 i https://gist.github.com/whitingx/3840905 -->
+    <!-- Ovo je za servise kao što su Twitter, Facebook, Discord... -->
+    <!-- theme-color radi i na Google Chrome-u za mobitele-->
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content="http://my.site.com"> -->
+    <!-- <meta property="og:image" content="http://my.site.com/images/thumb.png"> -->
+    <meta property="og:title" content="Naslovnica">
+    <meta property="og:description" content="Glavna stranica projekta.">
+    <meta name='og:site_name' content="Digitalizacija televizije">
+    <meta name="theme-color" content="#795548">
+
+
+    <!-- Importanje stylesheetova i sl. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="assets/img/tv_brown.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+    <title>Naslovnica - Digitalizacija TV</title>
+</head>
+
+<body id="noise-body">
+    <ul id="glavni-sadrzaj" class="dropdown-content brown lighten-4">
+        <li>
+            <a href="glavni-sadrzaj/razlike.html" class="brown-text text-darken-2 waves-effect">
+                O tehnologijama, ukratko
+            </a>
+        </li>
+        <li>
+            <a href="glavni-sadrzaj/razlike-std.html" class="brown-text text-darken-2 waves-effect">
+                Različiti standardi
+            </a>
+        </li>
+        <li>
+            <a href="glavni-sadrzaj/timeline.html" class="brown-text text-darken-2 waves-effect">
+                Timeline
+            </a>
+        </li>
+        <li>
+            <a href="glavni-sadrzaj/galerija.html" class="brown-text text-darken-2 waves-effect">
+                Foto galerija
+            </a>
+        </li>
+    </ul>
+
+    <div id="navbar" class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper brown">
+                <div class="brand-logo">
+                    <i id="logo-tv" class="material-icons brown-text text-lighten-5">live_tv</i>
+                    <a href="#">
+                        <b id="logo-text" class="brown-text text-lighten-5">Digitalizacija TV</b>
+                    </a>
+                </div>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="waves-effect brown-text text-lighten-5"><b>Naslovnica</b></a></li>
+                    <li>
+                        <a id="glavni-sadrzaj-navbar" class="dropdown-trigger brown-text text-lighten-5" class="waves-effect" data-target="glavni-sadrzaj">
+                            Glavni sadržaj
+                            <i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                    <li><a href="kontakt.html" class="waves-effect brown-text text-lighten-5">O stranici i kontakt</a></li>
+                </ul>
+
+                <a href="#" data-target="slide-out" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <ul id="slide-out" class="sidenav brown lighten-4">
+        <li>
+            <a class="waves-effect sidenav-close">
+                <i class="material-icons brown-text text-darken-2">arrow_back</i>
+            </a>
+        </li>
+
+        <li>
+            <a class="waves-effect brown-text text-darken-2 sidenav-close">
+                <i class="material-icons main-sidebar-icons brown-text text-darken-2">home</i>
+                <b>Naslovnica</b>
+            </a>
+        </li>
+
+        <li><div class="divider brown lighten-2"></div></li>
+
+        <li>
+            <a class="waves-effect brown-text text-darken-2" href="glavni-sadrzaj/razlike.html">
+                <i class="material-icons main-sidebar-icons brown-text text-darken-2">swap_horiz</i>
+                O tehnologijama, ukratko
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect brown-text text-darken-2" href="glavni-sadrzaj/razlike-std.html">
+                <i class="material-icons main-sidebar-icons brown-text text-darken-2">hdr_strong</i>
+                Različiti standardi
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect brown-text text-darken-2" href="glavni-sadrzaj/timeline.html">
+                <i class="material-icons main-sidebar-icons brown-text text-darken-2">timeline</i>
+                Timeline
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect brown-text text-darken-2" href="glavni-sadrzaj/galerija.html">
+                <i class="material-icons main-sidebar-icons brown-text text-darken-2">image</i>
+                Foto galerija
+            </a>
+        </li>
+
+        <li><div class="divider brown lighten-2"></div></li>
+
+        <li>
+            <a class="waves-effect brown-text text-darken-2" href="kontakt.html">
+                <i class="material-icons main-sidebar-icons brown-text text-darken-2">insert_drive_file</i>
+                O stranici i kontakt
+            </a>
+        </li>
+    </ul>
+
+    <div id="copy-modal" class="modal transparent">
+        <div class="modal-footer brown"> <!-- "footer" je namjerno iznad glavnog sadržaja -->
+            <div class="valign-wrapper modal-winbar-container">
+                <p class="modal-winbar-title brown-text text-lighten-5">
+                    <i class="tiny material-icons">info_outline</i>
+                    Info
+                </p>
+                <div class="flex-spacer"></div>
+                <a class="modal-close waves-effect btn-flat brown-text text-lighten-5">
+                    <i class="material-icons">close</i>
+                </a>
+            </div>
+        </div>
+        <div class="modal-content center brown lighten-1">
+            <a title="Posjetite stranicu ICT županije" class="col s12 l5" href="https://www.ictzupanija.hr/">
+                <img id="mini-logo" alt="Logo ICT županije" src="assets/img/logo.png">
+            </a>
+            <p class="brown-text text-lighten-5">
+                &copy; <b>Luka Krešimir Mihovilović</b> i <b>ICT županija</b>, 2022.
+            </p>
+        </div>
+    </div>
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large hover-effect-alt z-depth-2 brown lighten-4 waves-effect waves-circle">
+            <i class="large material-icons brown-text darken-2">more_vert</i>
+        </a>
+        <ul>
+            <li>
+                <a class="btn-floating brown lighten-4" href="#navbar">
+                    <i class="material-icons brown-text darken-2">expand_less</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating brown lighten-4 sidenav-trigger" data-target="slide-out">
+                    <i class="material-icons brown-text darken-2">menu</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating brown lighten-4 modal-trigger" href="#copy-modal">
+                    <i class="material-icons brown-text darken-2">info</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="secret-modal" class="modal transparent">
+        <div class="modal-footer brown"> <!-- "footer" je namjerno iznad glavnog sadržaja -->
+            <div class="valign-wrapper modal-winbar-container">
+                <p class="modal-winbar-title brown-text text-lighten-5">
+                    <i class="tiny material-icons">help_outline</i>
+                    Bravo!
+                </p>
+                <div class="flex-spacer"></div>
+                <a class="modal-close waves-effect btn-flat brown-text text-lighten-5">
+                    <i class="material-icons">close</i>
+                </a>
+            </div>
+        </div>
+        <div class="modal-content center brown lighten-1">
+            <h4 class="brown-text text-lighten-5">Bravo!</h4>
+            <p class="brown-text text-lighten-5">Pronašao si tajnu, bravo! <i class="tiny material-icons">thumb_up</i></p>
+        </div>
+    </div>
+
+    <div id="main-gradient" class="page-spread">
+        <div class="container homepage-container">
+            <div id="title-row" class="row">
+                <div id="tv-cont" class="col s12">
+                    <a class="modal-trigger" href="#secret-modal">
+                        <i id="tv" class="material-icons brown darken-1 brown-text text-lighten-4 z-depth-4 hover-effect circle">live_tv</i>
+                    </a>
+                </div>
+                <div id="title-and-sub" class="col s12">
+                    <p id="big-title" class="brown-text text-darken-2">Digitalizacija televizije</p>
+                    <p id="big-subtitle" class="brown-text text-darken-2"><b>Neke činjenice i zanimljivosti o prebacivanju na digitalnu televiziju!</b></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card transparent z-depth-2">
+                        <div class="card-image brown-card-image center">
+                            <i class="material-icons brown-text text-darken-2 card-icons hover-effect">swap_horiz</i>
+                        </div>
+                        <a href="glavni-sadrzaj/razlike.html">
+                            <div id="cc2" class="card-content white-text lighten-effect">
+                                <span class="card-title brown-text text-lighten-5">
+                                    O tehnologijama, ukratko
+                                    <i class="material-icons right arrow-move-effect">arrow_forward</i>
+                                </span>
+                                <p class="brown-text text-lighten-4">...i zašto smo se prebacili.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card transparent z-depth-2">
+                        <div class="card-image brown-card-image center">
+                            <i class="material-icons brown-text text-darken-2 card-icons hover-effect">hdr_strong</i>
+                        </div>
+                        <a href="glavni-sadrzaj/razlike-std.html">
+                            <div id="cc1" class="card-content white-text lighten-effect">
+                                <span class="card-title brown-text text-lighten-5">
+                                    Različiti standardi
+                                    <i class="material-icons right arrow-move-effect">arrow_forward</i>
+                                </span>
+                                <p class="brown-text text-lighten-4">...kod digitalne televizije.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card transparent z-depth-2">
+                        <div class="card-image brown-card-image center">
+                            <i class="material-icons brown-text text-darken-2 card-icons hover-effect">timeline</i>
+                        </div>
+                        <a href="glavni-sadrzaj/timeline.html">
+                            <div id="cc1" class="card-content white-text lighten-effect">
+                                <span class="card-title brown-text text-lighten-5">
+                                    Timeline
+                                    <i class="material-icons right arrow-move-effect">arrow_forward</i>
+                                </span>
+                                <p class="brown-text text-lighten-4">Planirani datumi za prelazak na DTV za određena područja svijeta.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card transparent z-depth-2">
+                        <div class="card-image brown-card-image center">
+                            <i class="material-icons brown-text text-darken-2 card-icons hover-effect">image</i>
+                        </div>
+                        <a href="glavni-sadrzaj/galerija.html">
+                            <div id="cc2" class="card-content white-text lighten-effect">
+                                <span class="card-title brown-text text-lighten-5">
+                                    Foto galerija
+                                    <i class="material-icons right arrow-move-effect">arrow_forward</i>
+                                </span>
+                                <p class="brown-text text-lighten-4">Pogledajte sve slike sa stranice na jednom mjestu!</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="brown lighten-1" id="cards-border"></div>
+            <div class="row">
+                <div class="col m12 l6 offset-l3">
+                    <div class="card transparent z-depth-2">
+                        <div class="card-image brown-card-image center">
+                            <i class="material-icons brown-text text-darken-2 card-icons hover-effect">insert_drive_file</i>
+                        </div>
+                        <a href="kontakt.html">
+                            <div id="cc4" class="card-content lighten-effect-alt">
+                                <span class="card-title brown-text text-darken-3">
+                                    O stranici i kontakt
+                                    <i class="material-icons right arrow-move-effect">arrow_forward</i>
+                                </span>
+                                <p class="brown-text text-darken-1">Za one znatiželjne.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Integriranje Materialize JS skripte -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        // Inicijaliziranje Materializovih komponenti
+        M.AutoInit();
+
+        // Ovo omogućuje pravilno funkcioniranje FAB elementa.
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(elems, {
+                hoverEnabled: false
+            });
+        });
+    </script>
+</body>
+</html>

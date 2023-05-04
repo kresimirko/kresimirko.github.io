@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <!-- Meta tagovi -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Napravljeno uz pomoć https://stackoverflow.com/a/54266944/14558305 i https://gist.github.com/whitingx/3840905 -->
+    <!-- Ovo je za servise kao što su Twitter, Facebook, Discord... -->
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content="http://my.site.com"> -->
+    <!-- <meta property="og:image" content="http://my.site.com/images/thumb.png"> -->
+    <meta property="og:title" content="O stranici i kontakt">
+    <meta property="og:description" content="Imate li kakvo pitanje ili primjedbu?">
+    <meta name='og:site_name' content="Digitalizacija televizije">
+    <meta name="theme-color" content="#795548">
+
+
+    <!-- Importanje stylesheetova i sl. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="assets/img/tv_brown.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+    <title>O stranici i kontakt - Digitalizacija TV</title>
+</head>
+
+<body id="noise-body">
+    <ul id="glavni-sadrzaj" class="dropdown-content brown lighten-4">
+        <li>
+            <a href="glavni-sadrzaj/razlike.html" class="brown-text text-darken-2 waves-effect">
+                O tehnologijama, ukratko
+            </a>
+        </li>
+        <li>
+            <a href="glavni-sadrzaj/razlike-std.html" class="brown-text text-darken-2 waves-effect">
+                Različiti standardi
+            </a>
+        </li>
+        <li>
+            <a href="glavni-sadrzaj/timeline.html" class="brown-text text-darken-2 waves-effect">
+                Timeline
+            </a>
+        </li>
+        <li>
+            <a href="glavni-sadrzaj/galerija.html" class="brown-text text-darken-2 waves-effect">
+                Foto galerija
+            </a>
+        </li>
+    </ul>
+
+    <div id="navbar" class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper brown">
+                <div class="brand-logo">
+                    <i id="logo-tv" class="material-icons brown-text text-lighten-5">live_tv</i>
+                    <a href="index.html">
+                        <b id="logo-text" class="brown-text text-lighten-5">Digitalizacija TV</b>
+                    </a>
+                </div>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html" class="waves-effect brown-text text-lighten-5">Naslovnica</a></li>
+                    <li>
+                        <a id="glavni-sadrzaj-navbar" class="dropdown-trigger brown-text text-lighten-5" class="waves-effect" data-target="glavni-sadrzaj">
+                            Glavni sadržaj
+                            <i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                    <li><a class="waves-effect brown-text text-lighten-5"><b>O stranici i kontakt</b></a></li>
+                </ul>
+
+                <a href="#" data-target="slide-out" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <ul id="slide-out" class="sidenav brown lighten-4">
+        <li>
+            <a class="waves-effect sidenav-close">
+                <i class="material-icons brown-text text-darken-2">arrow_back</i>
+            </a>
+        </li>
+
+        <li>
+            <a class="waves-effect brown-text text-darken-2" href="index.html">
+                <i class="material-icons main-sidebar-icons brown-text text-darken-2">home</i>
+                Naslovnica
+            </a>
+        </li>
+
+        <li><div class="divider brown lighten-2"></div></li>
+
+        <li>
+            <a class="waves-effect brown-text text-darken-2" href="glavni-sadrzaj/razlike.html">
+                <i class="material-icons main-sidebar-icons brown-text text-darken-2">swap_horiz</i>
+                O tehnologijama, ukratko
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect brown-text text-darken-2" href="glavni-sadrzaj/razlike-std.html">
+                <i class="material-icons main-sidebar-icons brown-text text-darken-2">hdr_strong</i>
+                Različiti standardi
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect brown-text text-darken-2" href="glavni-sadrzaj/timeline.html">
+                <i class="material-icons main-sidebar-icons brown-text text-darken-2">timeline</i>
+                Timeline
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect brown-text text-darken-2" href="glavni-sadrzaj/galerija.html">
+                <i class="material-icons main-sidebar-icons brown-text text-darken-2">image</i>
+                Foto galerija
+            </a>
+        </li>
+
+        <li><div class="divider brown lighten-2"></div></li>
+
+        <li>
+            <a class="waves-effect brown-text text-darken-2 sidenav-close">
+                <i class="material-icons main-sidebar-icons brown-text text-darken-2">insert_drive_file</i>
+                <b>O stranici i kontakt</b>
+            </a>
+        </li>
+    </ul>
+
+    <div id="copy-modal" class="modal transparent">
+        <div class="modal-footer brown"> <!-- "footer" je namjerno iznad glavnog sadržaja -->
+            <div class="valign-wrapper modal-winbar-container">
+                <p class="modal-winbar-title brown-text text-lighten-5">
+                    <i class="tiny material-icons">info_outline</i>
+                    Info
+                </p>
+                <div class="flex-spacer"></div>
+                <a class="modal-close waves-effect btn-flat brown-text text-lighten-5">
+                    <i class="material-icons">close</i>
+                </a>
+            </div>
+        </div>
+        <div class="modal-content center brown lighten-1">
+            <a title="Posjetite stranicu ICT županije" class="col s12 l5" href="https://www.ictzupanija.hr/">
+                <img id="mini-logo" alt="Logo ICT županije" src="assets/img/logo.png">
+            </a>
+            <p class="brown-text text-lighten-5">
+                &copy; <b>Luka Krešimir Mihovilović</b> i <b>ICT županija</b>, 2022.
+            </p>
+        </div>
+    </div>
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large hover-effect-alt z-depth-2 brown lighten-4 waves-effect waves-circle">
+            <i class="large material-icons brown-text darken-2">more_vert</i>
+        </a>
+        <ul>
+            <li>
+                <a class="btn-floating brown lighten-4" href="#navbar">
+                    <i class="material-icons brown-text darken-2">expand_less</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating brown lighten-4 sidenav-trigger" data-target="slide-out">
+                    <i class="material-icons brown-text darken-2">menu</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating brown lighten-4 modal-trigger" href="#copy-modal">
+                    <i class="material-icons brown-text darken-2">info</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="tel-modal" class="modal transparent">
+        <div class="modal-footer brown"> <!-- "footer" je namjerno iznad glavnog sadržaja -->
+            <div class="valign-wrapper modal-winbar-container">
+                <p class="modal-winbar-title brown-text text-lighten-5">
+                    <i class="tiny material-icons">phone_missed</i>
+                    Pardon!
+                </p>
+                <div class="flex-spacer"></div>
+                <a class="modal-close waves-effect btn-flat brown-text text-lighten-5">
+                    <i class="material-icons">close</i>
+                </a>
+            </div>
+        </div>
+        <div class="modal-content center brown lighten-1">
+            <h4 class="brown-text text-lighten-5">Pardon!</h4>
+            <p class="brown-text text-lighten-5">Trenutno ne primam zvrcanja! Ispričavam se.</p>
+        </div>
+    </div>
+
+    <div id="kontakt-bg" class="page-spread">
+        <div class="container">
+            <div class="center brown lighten-3 z-depth-4 container-card">
+                <img id="gina" src="assets/img/gina_pfp.jpg" alt="Gina" title="Gina!" class="circle responsive-img spin-effect z-depth-2">
+                <p class="brown-text text-darken-1">napravio</p>
+                <h3 id="name-lkm" class="brown-text text-darken-2" style="margin-top: -10px;">Luka Krešimir Mihovilović</h3>
+                <p class="brown-text text-darken-2 big-p">
+                    iz Srednje škole Ivana Lucića, Trogir
+                </p>
+                <p class="brown-text text-darken-1">mentori:</p>
+                <p class="brown-text text-darken-2 big-p" style="margin-top: -10px;">
+                    Andrijana Skelić, prof.
+                </p>
+                <p class="brown-text text-darken-2 big-p" style="margin-top: -10px;">
+                    Sandra Radulovski, prof.
+                </p>
+
+                <h5 class="brown-text text-darken-1" style="margin-top: 50px;">Linkovi:</h5>
+                <div class="carousel center no-init" style="height: 200px;">
+                    <div class="carousel-item">
+                        <a class="pink-text text-darken-4" href="https://github.com/kresimirko" title="https://github.com/kresimirko" alt="GitHub"> 
+                            <i class="large material-icons">link</i>
+                            <br>
+                            GitHub
+                            <i class="tiny material-icons">open_in_new</i>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a class="teal-text text-darken-3" href="mailto:lukak.business.contact@gmail.com" title="lukak.business.contact@gmail.com"> 
+                            <i class="large material-icons">email</i>
+                            <br>
+                            E-mail
+                            <i class="tiny material-icons">open_in_new</i>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a class="indigo-text text-darken-2 modal-trigger" href="#tel-modal" title="Trenutno ne primam zvrcanja!"> 
+                            <i class="large material-icons">phone</i>
+                            <br>
+                            Mobitel
+                        </a>
+                    </div>
+                </div>
+                <p class="brown-text text-darken-2 big-p">
+                    Sviđa li Vam se stranica ili me samo želite pozdraviti?
+                </p>
+                <p class="brown-text text-darken-2 big-p">
+                    Pošaljite mi e-mail<a class="kontakt-email-extended brown-text text-darken-2"> na </a><a class="teal-text text-darken-3 kontakt-email-extended" href="mailto:lukak.business.contact@gmail.com">lukak.business.contact@gmail.com</a>!
+                </p>
+
+                <div style="margin-top: 50px;"></div>
+                <p class="brown-text text-darken-2 big-p">
+                    Ocijenite stranicu!
+                </p>
+
+                <form action="#" style="max-width: 50%; transform: translateX(50%);">
+                    <p class="range-field">
+                        <input style="border: none;" type="range" min="0" max="10" />
+                    </p>
+                </form>
+
+                <div style="margin-top: 50px;"></div>
+                <p class="brown-text text-darken-2 big-p">
+                    Posjetite stranicu ICT županije!
+                </p>
+                <a title="Posjetite stranicu ICT županije" href="https://www.ictzupanija.hr/" target="_blank">
+                    <img id="credits-logo" class="brown z-depth-2 hover-effect-alt" alt="Logo ICT županije" src="assets/img/logo.png">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Integriranje Materialize JS skripte -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        // Inicijaliziranje Materializovih komponenti
+        M.AutoInit();
+
+        // Ovo omogućuje pravilno funkcioniranje FAB elementa.
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(elems, {
+                hoverEnabled: false
+            });
+        });
+    </script>
+</body>
+</html>

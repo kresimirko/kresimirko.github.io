@@ -1,0 +1,564 @@
+/* U pozicioniranju elemenata mi je pomoglo https://www.youtube.com/watch?v=njdJeu95p6s */
+/* vw je viewport širina, a vh viewport visina. (https://stackoverflow.com/a/26072215/14558305, https://stackoverflow.com/a/38340841/14558305) */
+/* Za gradijent je korišten https://www.colorzilla.com/gradient-editor/ + malo svojeg mozga */
+
+body
+{
+    font-family: 'Fira Sans', sans-serif;
+
+    display: grid;
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+.brand-logo
+{
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 10px;
+}
+
+#logo-tv
+{
+    font-size: xx-large;
+}
+
+#logo-text
+{
+    font-size: x-large;
+}
+
+#glavni-sadrzaj-navbar
+{
+    margin-top: 1px;
+}
+
+#noise-body
+{
+    /* Za "snijeg" su korišteni paint.net (https://www.getpaint.net/) i https://ezgif.com/apng-maker/ */
+    background-image: url("../img/noise.apng");
+    background-repeat: repeat;
+}
+
+.page-spread
+{
+    display: block;
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+#main-gradient
+{
+    /* Za gradijent je korišten https://www.colorzilla.com/gradient-editor/ */
+    background: rgba(215, 205, 201, 0.9);
+    background: -moz-linear-gradient(top,  rgba(215, 205, 201, 0.9) 0%, rgba(141, 110, 99, 0.9) 100%);
+    background: -webkit-linear-gradient(top,  rgba(215, 205, 201, 0.9) 0%, rgba(141, 110, 99, 0.9) 100%);
+    background: linear-gradient(to bottom,  rgba(215, 205, 201, 0.9) 0%, rgba(141, 110, 99, 0.9) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d7cdc9', endColorstr='#8d6e63', GradientType=0);
+}
+
+#kontakt-bg
+{
+    background: rgba(104, 75, 64, 0.95);
+}
+
+#razlike-gradient
+{
+    background: #3e8b89;background: #3e8b89;
+    background: -moz-linear-gradient(-2deg, #54aaa7 0%, #54aaa7 33%, #3e8b89 33.01%, #3e8b89 66%, #217572 66.01%, #217572 100%);
+    background: -webkit-linear-gradient(-2deg, #54aaa7 0%, #54aaa7 33%, #3e8b89 33.01%, #3e8b89 66%, #217572 66.01%, #217572 100%);
+    background: linear-gradient(178deg, #54aaa7 0%, #54aaa7 33%, #3e8b89 33.01%, #3e8b89 66%, #217572 66.01%, #217572 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2989d8', endColorstr='#146b68', GradientType=1);
+}
+
+#razlike-std-gradient
+{
+    background: #9ca8f3;background: #9ca8f3;
+    background: -moz-linear-gradient(-2deg, #abb3e5 0%, #abb3e5 33%, #8b98eb 33.01%, #8b98eb 66%, #697ae6 66.01%, #697ae6 100%);
+    background: -webkit-linear-gradient(-2deg, #abb3e5 0%, #abb3e5 33%, #8b98eb 33.01%, #8b98eb 66%, #697ae6 66.01%, #697ae6 100%);
+    background: linear-gradient(178deg, #abb3e5 0%, #abb3e5 33%, #8b98eb 33.01%, #8b98eb 66%, #697ae6 66.01%, #697ae6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2989d8', endColorstr='#146b68', GradientType=1);
+}
+
+#galerija-gradient
+{
+    background: #4d646f;
+    background: -moz-linear-gradient(top, #4d646f 0%, #9eb0b8 100%);
+    background: -webkit-linear-gradient(top, #4d646f 0%, #9eb0b8 100%);
+    background: linear-gradient(to bottom, #4d646f 0%, #9eb0b8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d646f', endColorstr='#9eb0b8', GradientType=0);
+}
+
+#tv
+{
+    font-size: 16vw;
+    padding: 30px;
+}
+
+#big-title
+{
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 7vw;
+}
+
+#big-subtitle
+{
+    font-size: 2vw;
+    margin-top: -7vw;
+}
+
+a
+{
+    color: white;
+}
+
+.card
+{
+    border-radius: 10px;
+}
+
+.card-image, .card-image img
+{
+    border-radius: 10px 10px 0px 0px !important;
+}
+
+.card-content
+{
+    border-radius: 0px 0px 10px 10px !important;
+}
+
+.brown-card-image
+{
+    background-color: rgba(141, 110, 99, 0.5);
+}
+
+.card-icons
+{
+    font-size: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#cards-border
+{
+    height: 2px;
+    margin-bottom: 25px;
+}
+
+.modal
+{
+    border-radius: 15px;
+}
+
+.modal-footer
+{
+    border-radius: 0px !important;
+}
+
+.modal-winbar-container
+{
+    display: flex;
+    margin-top: -4px;
+    max-height: 56px;
+}
+
+.modal-winbar-title
+{
+    font-size: larger;
+    margin-left: 10px;
+}
+
+.flex-spacer
+{
+    /* https://davidwalsh.name/flexbox-spacer */
+    flex-grow: 1;
+}
+
+#mini-logo
+{
+    max-width: 100px;
+    height: 100%;
+}
+
+#credits-logo
+{
+    max-width: 150px;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.materialboxed
+{
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.materialboxed.active
+{
+    border-radius: 0px !important;
+}
+
+.big-p
+{
+    font-size: larger;
+}
+
+#timeline-list
+{
+    list-style: disc;
+}  
+
+#timeline-body
+{
+    background-color: rgb(32, 32, 32);
+}
+
+.container-card
+{
+    border-radius: 25px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#gina
+{
+    width: 256px;
+}
+
+.tl-collapsible
+{
+    border: none;
+    border-radius: 25px;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.tl-collapsible-header
+{
+    border: none;
+}
+
+.tl-collapsible-header .grey-text
+{
+    font-size: larger;
+}
+
+.tl-collapsible-body
+{
+    border: none;
+}
+
+.teal-tabs .indicator
+{
+    background-color: rgba(0, 150, 136);
+}
+
+.teal-tabs .tab a:hover, .teal-tabs .tab a.active
+{
+    /*
+    Kroz eksperimentaciju i uz pomoć Firefoxovih Dev Toolsova,
+    shvatio sam da ovo mijenja boju iza aktivnih i hoveranih tabulatora.
+    !important je ključni dio ovoga.
+    */
+    background-color: rgba(0, 150, 136, 0.2) !important;
+
+    border-radius: 8px 8px 0px 0px;
+}
+
+.teal-hover:hover
+{
+    background-color: rgba(0, 150, 135, 0.3) !important;
+}
+
+.indigo-hover:hover
+{
+    background-color: rgba(80, 97, 207, 0.4) !important;
+}
+
+.indigo-tabs .indicator
+{
+    background-color: rgba(80, 97, 207);
+}
+
+.indigo-tabs .tab a:hover, .indigo-tabs .tab a.active
+{
+    background-color: rgba(80, 97, 207, 0.2) !important;
+
+    border-radius: 8px 8px 0px 0px;
+}
+
+.indigo-tabs .indigo-hover:hover
+{
+    background-color: rgba(80, 97, 207, 0.3) !important;
+}
+
+.blue-grey-hover:hover
+{
+    background-color: rgba(96, 125, 139, 0.4) !important;
+}
+
+.blue-grey-tabs .indicator
+{
+    background-color: rgb(96, 125, 139);
+}
+
+.blue-grey-tabs .tab a:hover, .blue-grey-tabs .tab a.active
+{
+    background-color: rgba(96, 125, 139, 0.2) !important;
+
+    border-radius: 8px 8px 0px 0px;
+}
+
+.blue-grey-tabs .blue-grey-hover:hover
+{
+    background-color: rgba(96, 125, 139, 0.3) !important;
+}
+
+.hover-effect
+{
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.hover-effect:hover
+{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.hover-effect-alt
+{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.hover-effect-alt:hover
+{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.lighten-effect
+{
+    background-color: #6d4c41;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.lighten-effect:hover
+{
+    background-color: #88685e;
+}
+
+.lighten-effect-alt
+{
+    background-color: #bcaaa4;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.lighten-effect-alt:hover
+{
+    background-color: #d3cac6;
+}
+
+.spin-effect
+{
+    -webkit-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+.spin-effect:hover
+{
+    transform: rotate(360deg); /* s https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate */
+}
+
+/* s https://stackoverflow.com/a/20304508/14558305 */
+@media screen and (min-width: 993px)
+{
+    #logo-tv
+    {
+        padding-left: 15px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 991px)
+{
+    #big-subtitle
+    {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    .brand-logo
+    {
+        width: 100%;
+    }
+
+    #logo-tv
+    {
+        padding-left: 60px;
+    }
+}
+
+@media screen and (min-width: 601px)
+{
+    #tv-cont
+    {
+        display: grid;
+        place-items: center;
+    }
+    
+    #title-row
+    {
+        display: flex;
+    }
+
+    .homepage-container
+    {
+        margin-top: -4vw;
+    }
+}
+
+@media screen and (max-width: 600px)
+{
+    #tv
+    {
+        font-size: 200px;
+    }
+
+    #big-title
+    {
+        font-size: 50px;
+    }
+
+    #big-subtitle
+    {
+        font-size: x-large;
+    }
+
+    #tv-cont
+    {
+        display: grid;
+        place-items: center;
+    }
+
+    #title-and-sub
+    {
+        margin-top: -30px;
+    }
+
+    .homepage-container
+    {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (min-width: 370px)
+{
+    #footer-row
+    {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        padding-bottom: 20px;
+    }
+    
+    #nametag
+    {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (min-width: 340px)
+{
+    .sidenav
+    {
+        width: 340px;
+    }
+
+    .divider
+    {
+        width: 90%;
+        transform: translate(17px, 0px);
+    }
+}
+
+@media screen and (max-width: 319px)
+{
+    .sidenav
+    {
+        width: 100%;
+    }
+
+    .sidenav li a
+    {
+        height: fit-content;
+    }
+
+    .main-sidebar-icons
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 360px)
+{
+    #tv
+    {
+        font-size: 50vw;
+    }
+
+    #big-title
+    {
+        margin-top: 18vw;
+        font-size: 12vw;
+    }
+
+    h2
+    {
+        font-size: 12vw;
+    }
+
+    #name-lkm
+    {
+        font-size: 10vw;
+    }
+}
+
+@media screen and (max-width: 300px)
+{
+    .kontakt-email-extended
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 275px)
+{
+    #logo-text
+    {
+        display: none;
+    }
+}

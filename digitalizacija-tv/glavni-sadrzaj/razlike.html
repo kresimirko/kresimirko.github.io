@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <!-- Meta tagovi -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Napravljeno uz pomoć https://stackoverflow.com/a/54266944/14558305 i https://gist.github.com/whitingx/3840905 -->
+    <!-- Ovo je za servise kao što su Twitter, Facebook, Discord... -->
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content="http://my.site.com"> -->
+    <!-- <meta property="og:image" content="http://my.site.com/images/thumb.png"> -->
+    <meta property="og:title" content="O tehnologijama, ukratko">
+    <meta property="og:description" content="...i zašto smo se prebacili.">
+    <meta name='og:site_name' content="Digitalizacija televizije">
+    <meta name="theme-color" content="#0f6461">
+
+
+    <!-- Importanje stylesheetova i sl. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../assets/img/tv_brown.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+ 
+    <title>O tehnologijama, ukratko - Digitalizacija TV</title>
+</head>
+
+<body id="razlike-gradient">
+    <ul id="glavni-sadrzaj" class="dropdown-content teal lighten-4">
+        <li>
+            <a href="razlike.html" class="teal-text text-darken-2 waves-effect teal-hover">
+                <b>O tehnologijama, ukratko</b>
+            </a>
+        </li>
+        <li>
+            <a href="razlike-std.html" class="teal-text text-darken-2 waves-effect teal-hover">
+                Različiti standardi
+            </a>
+        </li>
+        <li>
+            <a href="timeline.html" class="teal-text text-darken-2 waves-effect teal-hover">
+                Timeline
+            </a>
+        </li>
+        <li>
+            <a href="galerija.html" class="teal-text text-darken-2 waves-effect teal-hover">
+                Foto galerija
+            </a>
+        </li>
+    </ul>
+
+    <div id="navbar" class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper" style="background-color: #0F6461;">
+                <div class="brand-logo">
+                    <i id="logo-tv" class="material-icons teal-text text-lighten-5">live_tv</i>
+                    <a class="teal-text text-lighten-5" href="../index.html">
+                        <b id="logo-text">Digitalizacija TV</b>
+                    </a>
+                </div>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="../index.html" class="waves-effect teal-text text-lighten-5">Naslovnica</a></li>
+                    <li>
+                        <a id="glavni-sadrzaj-navbar" class="dropdown-trigger teal-text text-lighten-5" class="waves-effect" data-target="glavni-sadrzaj">
+                            <b>Glavni sadržaj</b>
+                            <i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                    <li><a href="../kontakt.html" class="waves-effect teal-text text-lighten-5">O stranici i kontakt</a></li>
+                </ul>
+
+                <a href="#" data-target="slide-out" class="sidenav-trigger teal-text text-lighten-5">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <ul id="slide-out" class="sidenav teal lighten-4">
+        <li>
+            <a class="waves-effect sidenav-close">
+                <i class="material-icons teal-text text-darken-3">arrow_back</i>
+            </a>
+        </li>
+
+        <li>
+            <a class="waves-effect teal-text text-darken-3" href="../index.html">
+                <i class="material-icons main-sidebar-icons teal-text text-darken-3">home</i>
+                Naslovnica
+            </a>
+        </li>
+
+        <li><div class="divider teal lighten-2"></div></li>
+
+        <li>
+            <a class="waves-effect teal-text text-darken-3" href="razlike.html">
+                <i class="material-icons main-sidebar-icons teal-text text-darken-3">swap_horiz</i>
+                <b>O tehnologijama, ukratko</b>
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect teal-text text-darken-3" href="razlike-std.html">
+                <i class="material-icons main-sidebar-icons teal-text text-darken-3">hdr_strong</i>
+                Različiti standardi
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect teal-text text-darken-3" href="timeline.html">
+                <i class="material-icons main-sidebar-icons teal-text text-darken-3">timeline</i>
+                Timeline
+            </a>
+        </li>
+        <li>
+            <a class="waves-effect teal-text text-darken-3" href="galerija.html">
+                <i class="material-icons main-sidebar-icons teal-text text-darken-3">image</i>
+                Foto galerija
+            </a>
+        </li>
+
+        <li><div class="divider teal lighten-2"></div></li>
+
+        <li>
+            <a class="waves-effect teal-text text-darken-3" href="../kontakt.html">
+                <i class="material-icons main-sidebar-icons teal-text text-darken-3">insert_drive_file</i>
+                O stranici i kontakt
+            </a>
+        </li>
+    </ul>
+
+    <div id="copy-modal" class="modal transparent">
+        <div class="modal-footer teal darken-3"> <!-- "footer" je namjerno iznad glavnog sadržaja -->
+            <div class="valign-wrapper modal-winbar-container">
+                <p class="modal-winbar-title teal-text text-lighten-5">
+                    <i class="tiny material-icons">info_outline</i>
+                    Info
+                </p>
+                <div class="flex-spacer"></div>
+                <a class="modal-close waves-effect btn-flat teal-text text-lighten-5">
+                    <i class="material-icons">close</i>
+                </a>
+            </div>
+        </div>
+        <div class="modal-content center teal darken-2">
+            <a title="Posjetite stranicu ICT županije" class="col s12 l5" href="https://www.ictzupanija.hr/">
+                <img id="mini-logo" alt="Logo ICT županije" src="../assets/img/logo.png">
+            </a>
+            <p class="teal-text text-lighten-5">
+                &copy; <b>Luka Krešimir Mihovilović</b> i <b>ICT županija</b>, 2022.
+            </p>
+        </div>
+    </div>
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large hover-effect-alt z-depth-2 teal lighten-4 waves-effect waves-circle">
+            <i class="large material-icons teal-text text-darken-2">more_vert</i>
+        </a>
+        <ul>
+            <li>
+                <a class="btn-floating teal lighten-4" href="#navbar">
+                    <i class="material-icons teal-text text-darken-2">expand_less</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating teal lighten-4 sidenav-trigger" data-target="slide-out">
+                    <i class="material-icons teal-text text-darken-2">menu</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating teal lighten-4 modal-trigger" href="#copy-modal">
+                    <i class="material-icons teal-text text-darken-2">info</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="pozadina-gradijent">
+        <div class="container teal-text text-darken-4">
+            <div class="center teal lighten-4 z-depth-4 container-card">
+                <ul class="tabs teal-tabs transparent" style="margin-bottom: 20px;">
+                    <li class="tab col s3">
+                        <a class="teal-text text-darken-2" href="#analogna" class="active">
+                            O analognoj TV
+                        </a>
+                    </li>
+                    <li class="tab col s3">
+                        <a class="teal-text text-darken-2" href="#digitalna">
+                            O digitalnoj TV
+                        </a>
+                    </li>
+                    <li class="tab col s3">
+                        <a class="teal-text text-darken-2" href="#izvori">
+                            Izvori
+                        </a>
+                    </li>
+                </ul>
+
+
+                <div id="analogna" class="container">
+                    <p class="big-p">
+                        Možda ste čuli svoje roditelje kako se žale na digitalnu televiziju i kako govore da je analogna "bolja".
+                        <br>
+                        Kažem <i>možda</i> jer znam da moji to govore. Ne znam za vas.
+                    </p>
+                    <p class="big-p">
+                        Idemo zajedno vidjeti kako je to zapravo izgledalo.
+                    </p>
+
+                    <h3>Ukratko</h3>
+                    <p class="big-p">
+                        Analogna televizija koristi <i>analogne signale</i> za prijenos podataka.
+                        Ti signali sadržu svjetlinu, boju i zvuk koju televizor onda prikazuje.
+                    </p>
+                    <p class="big-p">
+                        Za zvuk se koristi signal koji koristi <i>frekvencijsku modulaciju</i> (kao kod FM radija),
+                        a za sliku se koristi signal koji koristi <i>amplitudnu modulaciju</i>.
+                    </p>
+                    <p class="big-p">
+                        Ta dva signala onda televizor <i>demodulira</i> te dobivamo sliku i zvuk.
+                    </p>
+                    <div class="row">
+                        <div class="col s12 l6">
+                            <img class="materialboxed" alt="Prikaz NTSC signala"
+                                 title="Prikaz NTSC signala"
+                                 src="https://upload.wikimedia.org/wikipedia/commons/1/1e/NTSC_Signal.png">
+                            <p><i>Prikaz analognog NTSC signala. Saržava informacije o slici.</i></p>
+                        </div>
+                        <div class="col s12 l6">
+                            <img class="materialboxed" alt="Razlika između AM i FM"
+                                 title="Razlika između AM i FM"
+                                 src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Amfm3-en-de.gif">
+                            <p><i>Razlika između AM i FM - kod AM se mijenja amplituda signala, a kod FM frekvencija. Logično.</i></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 l6 offset-l3">
+                            <img class="materialboxed" alt="Kompozitni video signal"
+                                 title="Kompozitni video signal"
+                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Video-line.svg/1920px-Video-line.svg.png">
+                            <p><i>Kompozitni video signal koji dobijemo demoduliranjem video signala.</i></p>
+                        </div>
+                    </div>
+                    <p class="big-p">
+                        Video je kodiran na način da se može lako prikazati na CRT televizorima
+                        (skeniranje snopa elektrona <i>od vrha do dna, horizontalno.</i>)
+                    </p>
+                    <div class="row">
+                        <div class="col s12 l6 offset-l3">
+                            <img class="materialboxed" alt="Raster skeniranje"
+                                 title="Raster skeniranje"
+                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Raster-scan.svg/1024px-Raster-scan.svg.png">
+                            <p><i>Raster skeniranje.</i></p>
+                        </div>
+                    </div>
+
+                    <h3>Zašto je "bolja"?</h3>
+                    <p class="big-p">
+                        Glavni razlog ovakvog kriticizma je reagiranje televizora na kvalitetu signala.
+                    </p>
+                    <p class="big-p">
+                        Ako se događa kakva smetnja, slika će biti toliko poremećena koliko je jaka smetnja,
+                        dok je kod digitalnog "ili sve, ili ništa".
+                    </p>
+                    <div class="row">
+                        <div class="col s12 l6">
+                            <img class="materialboxed" alt="Smetnje u primanju signala"
+                                 title="Smetnje u primanju signala"
+                                 src="https://hackaday.com/wp-content/uploads/2021/01/analog-tv-featured.jpg">
+                            <p><i>Smetnje u primanju signala.</i></p>
+                        </div>
+                        <div class="col s12 l6">
+                            <img class="materialboxed" alt="Digitalna litica"
+                                 title="Digitalna litica"
+                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Digital-cliff.svg/1280px-Digital-cliff.svg.png">
+                            <p><i>Fenomen znan kao "digitalna litica".</i></p>
+                        </div>
+                    </div>
+                    <p class="big-p">
+                        Kao drugo, tu je najvjerojatnije sam koncept promjene. Ljudi znaju mrziti promjene.
+                    </p>
+                </div>
+
+
+                <div id="digitalna" class="container">
+                    <p class="big-p">
+                        Digitalna televizija također koristi signale, no oni su <i>digitalno kodirani</i>.
+                    </p>
+                    <p class="big-p">
+                        Ti signali sadrže video na isti način kao i <i>današnje video datoteke</i>, uz ostale stvari (što ovisi o
+                        <a class="indigo-text" href="razlike-std.html" title="Više o standardima"> 
+                            <i class="tiny material-icons">link</i>
+                            <u>standardu digitalnog emitiranja</u>
+                        </a>).
+                    </p>
+
+                    <h3>Zašto smo prešli?</h3>
+                    <p class="big-p">
+                        Postoji više razloga iza prelaska s analogne na digitalnu televiziju, a glavni razlog ovomu su <b>resursi</b>.
+                        Emitiranje digitalnih signala je jeftinije od emitiranja analognih, te zahtjeva manje resursa.
+                    </p>
+                    <p class="big-p">
+                        Druga glavna stvar je <b>fleksibilnost</b>.
+                        Kod analogne televizije tu imamo video, zvuk i možda još neki nadodatak ali ništa više.
+                        Digitalna televizija može podržavati puno više funkcija (kao npr. različiti <i>aspect ratio</i>), što opet, ovisi o
+                        <a class="indigo-text" href="razlike-std.html" title="Više o standardima"> 
+                            <i class="tiny material-icons">link</i>
+                            <u>standardu</u>
+                        </a>.
+                    </p>
+                    <p class="big-p">
+                        I za kraj, tu imamo <b>kvalitetu</b> slike i zvuka.
+                        Signal ne treba biti najbolji da bi kvaliteta sadržaja bila najbolja, što možete vidjeti po ovom grafu ispod odlomka.
+                        Uz to, rezolucija može biti viša od one kod analogne TV.
+                    </p>
+                    <div class="row">
+                        <div class="col s12 l6">
+                            <img class="materialboxed" alt="ISDB-T vs NTSC" title="ISDB-T vs NTSC"
+                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Digital_%26_Analog_TV_screen_quality_comparison-1.jpg/800px-Digital_%26_Analog_TV_screen_quality_comparison-1.jpg">
+                            <p>
+                                <i>
+                                    Razlika u kvaliteti digitalnog
+                                    <!-- Razlog zbog kojeg poveznica ovdje ide na #atsc-substd a ne na #isdb je zbog toga što će se stranica
+                                        otvoriti s povezanim elementom ispod navbara. -->
+                                    <a class="indigo-text" href="razlike-std.html#atsc-substd" title="Više o ISDB-T standardu">
+                                        <i class="tiny material-icons">link</i>
+                                        <u>ISDB-T</u>
+                                    </a>
+                                    signala i analognog NTSC signala.
+                                </i>
+                            </p>
+                        </div>
+                        <div class="col s12 l6">
+                            <img class="materialboxed" alt="Smetnja digitalnom signalu"
+                                 title="Smetnja digitalnom signalu"
+                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Digital-signal-noise.svg/1280px-Digital-signal-noise.svg.png">
+                            <p><i>Mala smetnja digitalnom signalu ne kvari digitalne znamenke.</i></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="izvori" class="container">
+                    <p class="big-p">Izvori slika i podataka.</p>
+
+                    <a class="indigo-text" href="https://en.wikipedia.org/wiki/Analog_television"
+                       title='"Digital television transition" na Wikipediji' target="_blank">
+                        <i class="tiny material-icons">link</i>
+                        <u>"Analog television" na Wikipediji</u>
+                        <i class="tiny material-icons">open_in_new</i>
+                    </a>
+                    <br>
+                    <a class="indigo-text" href="https://en.wikipedia.org/wiki/Digital_television"
+                       title='"Digital television transition" na Wikipediji' target="_blank">
+                        <i class="tiny material-icons">link</i>
+                        <u>"Digital television" na Wikipediji</u>
+                        <i class="tiny material-icons">open_in_new</i>
+                    </a>
+                    <br>
+                    <a class="indigo-text" href="https://en.wikipedia.org/wiki/Digital_television_transition"
+                       title='"Digital television transition" na Wikipediji' target="_blank">
+                        <i class="tiny material-icons">link</i>
+                        <u>"Digital television transition" na Wikipediji</u>
+                        <i class="tiny material-icons">open_in_new</i>
+                    </a>
+                    <br>
+                    <a class="indigo-text" href="https://en.wikipedia.org/wiki/Cliff_effect"
+                       title='"Digital television transition" na Wikipediji' target="_blank">
+                        <i class="tiny material-icons">link</i>
+                        <u>"Cliff effect" na Wikipediji</u>
+                        <i class="tiny material-icons">open_in_new</i>
+                    </a>
+                    <br>
+                    <a class="indigo-text" href="https://en.wikipedia.org/wiki/Digital_signal"
+                       title='"Digital television transition" na Wikipediji' target="_blank">
+                        <i class="tiny material-icons">link</i>
+                        <u>"Digital signal" na Wikipediji</u>
+                        <i class="tiny material-icons">open_in_new</i>
+                    </a>
+                    <br>
+                    <a class="indigo-text" href="https://en.wikipedia.org/wiki/Amplitude_modulation"
+                       title='"Digital television transition" na Wikipediji' target="_blank">
+                        <i class="tiny material-icons">link</i>
+                        <u>"Amplitude modulation" na Wikipediji</u>
+                        <i class="tiny material-icons">open_in_new</i>
+                    </a>
+                    <br>
+                    <a class="indigo-text" href="https://en.wikipedia.org/wiki/Frequency_modulation"
+                       title='"Digital television transition" na Wikipediji' target="_blank">
+                        <i class="tiny material-icons">link</i>
+                        <u>"Frequency_modulation" na Wikipediji</u>
+                        <i class="tiny material-icons">open_in_new</i>
+                    </a>
+                    <br>
+                    <a class="indigo-text" href="https://hackaday.com/2021/01/29/the-last-few-analogue-tv-stations-in-north-america/"
+                       title='"Digital television transition" na Wikipediji' target="_blank">
+                        <i class="tiny material-icons">link</i>
+                        <u>"The Last Few Analogue TV Stations In North America" sa stranice Hackaday</u>
+                        <i class="tiny material-icons">open_in_new</i>
+                    </a>
+                    <br>
+                    <a class="indigo-text" href="https://www.dummies.com/article/technology/electronics/tvs-home-theater/why-are-we-switching-to-digital-television-signals-198736/"
+                       title='"Digital television transition" na Wikipediji' target="_blank">
+                        <i class="tiny material-icons">link</i>
+                        <u>"Why Are We Switching to Digital Television Signals?" sa stranice Dummies</u>
+                        <i class="tiny material-icons">open_in_new</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Integriranje Materialize JS skripte -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        // Inicijaliziranje Materializovih komponenti
+        M.AutoInit();
+
+        // Ovo omogućuje pravilno funkcioniranje FAB elementa.
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(elems, {
+                hoverEnabled: false
+            });
+        });
+    </script>
+</body>
+</html>
