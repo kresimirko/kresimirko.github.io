@@ -1,1 +1,1 @@
-[kikipnt](./kikipnt/index.html)
+[kikipnt](https://kresimirko.github.io/kikipnt/#/)
