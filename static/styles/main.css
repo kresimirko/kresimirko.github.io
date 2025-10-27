@@ -1,25 +1,23 @@
-@import "../../node_modules/@catppuccin/palette/css/catppuccin.css";
-
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
-    background-color: var(--ctp-mocha-base);
-    color: var(--ctp-mocha-text);
+    background-color: #1e1e2e; /* ctp mocha base */
+    color: #cdd6f4; /* ctp mocha text */
     @media screen and (min-width: 480px) {
         margin: 4rem; /* temporary */
     }
 }
 
 a:link {
-    color: var(--ctp-mocha-mauve);
+    color: #cba6f7; /* ctp mocha mauve */
 }
 
 a:visited {
-    color: var(--ctp-mocha-lavender);
+    color: #b4befe; /* ctp mocha lavender */
 }
 
 hr {
-    border: 1px solid var(--ctp-mocha-surface0);
+    border: 1px solid #313244 /* mocha base surface 0 */;
 }
