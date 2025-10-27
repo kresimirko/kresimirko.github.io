@@ -8,6 +8,7 @@
     --accent: #8839ef; /* mauve */
     --accent2: #7287fd; /* lavender */
     --surface0: #ccd0da;
+    --mantle: #e6e9ef;
 }
 .theme-dark { /* ctp mocha */
     --base: #1e1e2e;
@@ -15,14 +16,17 @@
     --accent: #cba6f7; /* mauve */
     --accent2: #b4befe; /* lavender */
     --surface0: #313244;
+    --mantle: #181825;
 }
 
 html {
     background-color: var(--base); /* ctp mocha base */
     color: var(--text); /* ctp mocha text */
-    @media screen and (min-width: 480px) {
-        margin: 4rem; /* temporary */
-    }
+    margin: 0;
+}
+
+body {
+    margin: 0;
 }
 
 h1 {
