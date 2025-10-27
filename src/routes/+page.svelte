@@ -54,7 +54,7 @@
 	}
 
 	#header {
-		background-color: rgba(24, 24, 37, 0.75);
+		background-color: var(--base-tp);
 		padding: 6rem 10rem 2rem 10rem;
 		display: flex;
 		flex-direction: row;

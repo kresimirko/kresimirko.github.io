@@ -4,6 +4,7 @@
 
 .theme-light { /* ctp latte */
     --base: #eff1f5;
+    --base-tp: #eff1f5bf;
     --text: #4c4f69;
     --accent: #8839ef; /* mauve */
     --accent2: #7287fd; /* lavender */
@@ -13,6 +14,7 @@
 }
 .theme-dark { /* ctp mocha */
     --base: #1e1e2e;
+    --base-tp: #1e1e2ebf;
     --text: #cdd6f4;
     --accent: #cba6f7; /* mauve */
     --accent2: #b4befe; /* lavender */
