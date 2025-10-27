@@ -7,6 +7,7 @@
     --text: #4c4f69;
     --accent: #8839ef; /* mauve */
     --accent2: #7287fd; /* lavender */
+    --error: #d20f39; /* red */
     --surface0: #ccd0da;
     --mantle: #e6e9ef;
 }
@@ -15,6 +16,7 @@
     --text: #cdd6f4;
     --accent: #cba6f7; /* mauve */
     --accent2: #b4befe; /* lavender */
+    --error: #f38ba8; /* red */
     --surface0: #313244;
     --mantle: #181825;
 }
