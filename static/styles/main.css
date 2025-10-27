@@ -1,23 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+}
+
+.theme-light { /* ctp latte */
+    --base: #eff1f5;
+    --text: #4c4f69;
+    --accent: #8839ef; /* mauve */
+    --accent2: #7287fd; /* lavender */
+    --surface0: #ccd0da;
+}
+.theme-dark { /* ctp mocha */
+    --base: #1e1e2e;
+    --text: #cdd6f4;
+    --accent: #cba6f7; /* mauve */
+    --accent2: #b4befe; /* lavender */
+    --surface0: #313244;
 }
 
 html {
-    background-color: #1e1e2e; /* ctp mocha base */
-    color: #cdd6f4; /* ctp mocha text */
+    background-color: var(--base); /* ctp mocha base */
+    color: var(--text); /* ctp mocha text */
     @media screen and (min-width: 480px) {
         margin: 4rem; /* temporary */
     }
 }
 
 a:link {
-    color: #cba6f7; /* ctp mocha mauve */
+    color: var(--accent); /* ctp mocha mauve */
 }
 
 a:visited {
-    color: #b4befe; /* ctp mocha lavender */
+    color: var(--accent2); /* ctp mocha lavender */
 }
 
 hr {
-    border: 1px solid #313244 /* mocha base surface 0 */;
+    border: 1px solid var(--surface0) /* mocha base surface 0 */;
 }
