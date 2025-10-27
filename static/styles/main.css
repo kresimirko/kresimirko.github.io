@@ -1,0 +1,25 @@
+@import "../../node_modules/@catppuccin/palette/css/catppuccin.css";
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    background-color: var(--ctp-mocha-base);
+    color: var(--ctp-mocha-text);
+    @media screen and (min-width: 480px) {
+        margin: 4rem; /* temporary */
+    }
+}
+
+a:link {
+    color: var(--ctp-mocha-mauve);
+}
+
+a:visited {
+    color: var(--ctp-mocha-lavender);
+}
+
+hr {
+    border: 1px solid var(--ctp-mocha-surface0);
+}
