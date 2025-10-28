@@ -37,6 +37,14 @@ h1 {
     margin-top: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 a:link {
     color: var(--accent); /* ctp mocha mauve */
 }
