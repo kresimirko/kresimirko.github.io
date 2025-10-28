@@ -6,8 +6,8 @@
     --base: #eff1f5;
     --base-tp: #eff1f5bf;
     --text: #4c4f69;
-    --accent: #8839ef; /* mauve */
-    --accent2: #7287fd; /* lavender */
+    --accent: #1e66f5; /* blue */
+    --accent2: #8839ef; /* mauve */
     --error: #d20f39; /* red */
     --surface0: #ccd0da;
     --mantle: #e6e9ef;
@@ -16,8 +16,8 @@
     --base: #1e1e2e;
     --base-tp: #1e1e2ebf;
     --text: #cdd6f4;
-    --accent: #cba6f7; /* mauve */
-    --accent2: #b4befe; /* lavender */
+    --accent: #89b4fa; /* blue */
+    --accent2: #cba6f7; /* mauve */
     --error: #f38ba8; /* red */
     --surface0: #313244;
     --mantle: #181825;
