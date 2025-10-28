@@ -3,12 +3,31 @@
 ## School and [EDIT Code School](https://digitalnadalmacija.hr/edit) works
 
 ### 2023/2024
+
 [Karta gradske jezgre Trogira](https://kresimirko.github.io/karta-trogira/) ([source code](https://github.com/kresimirko/karta-trogira))
+
 ### 2022/2023
+
 [kikipnt](https://kresimirko.github.io/kikipnt/#/) ([source code](https://github.com/kresimirko/kikipnt))
+
 ### 2021/2022
+
 [Digitalizacija televizije](https://kresimirko.github.io/digitalizacija-tv/) ([source code](https://github.com/kresimirko/digitalizacija-tv))
+
 ### 2020/2021
+
 [Prepoznavanje emocija u slici prema dominantnoj boji](https://helios.com.hr/edit/2021/projekti/p01/index.html)
+
 ### 2019/2020
+
 [Srednjovjekovni Trogir](https://helios.com.hr/edit/2020/projekti/trogir03/index.html)
+
+## Miscellaneous
+
+### Userstyles for [Stylus](https://add0n.com/stylus.html)
+
+[Repository link with all of them](https://github.com/kresimirko/userstyles)
+
+#### Catppuccin
+
+[FESB Raspored](https://github.com/kresimirko/userstyles/blob/main/styles/catppuccin/fesbrasp/catppuccin.user.css) (not yet finished)
