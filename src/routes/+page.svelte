@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Home from "./home.svx";
+
 	function setTheme(themeName: string) {
 		localStorage.setItem('theme', themeName);
 		document.documentElement.className = themeName;
@@ -26,11 +28,7 @@
 </div>
 
 <div id="main">
-	<h1>Works</h1>
-
-	<p><a href="./kikipnt/">kikipnt</a></p>
-	<p><a href="./digitalizacija-tv/">Digitalizacija televizije</a></p>
-	<p><a href="./karta-trogira/">Karta gradske jezgre Trogira</a></p>
+	<Home />
 
 	<hr />
 
