@@ -12,6 +12,14 @@
 
 # Current projects
 
+## [kikipnt+](https://kresimirko.github.io/kikipnt-plus)
+
+a maintained version of "kikipnt", listed below
+
+| ![kikipnt+](https://github.com/kresimirko/kikipnt-plus/raw/main/screenshots/latest.png) |
+| --- |
+| [kikipnt+](https://kresimirko.github.io/kikipnt-plus) ([source code](https://github.com/kresimirko/kikipnt-plus)) |
+
 ## [Userstyles](https://github.com/kresimirko/userstyles) for [Stylus](https://add0n.com/stylus.html)
 
 ### [Catppuccin](https://catppuccin.com/palette/)
@@ -32,7 +40,7 @@
 
 ### 2022/2023
 
-| ![kikipnt](https://github.com/kresimirko/kikipnt/raw/new/screenshots/latest.png) |
+| ![kikipnt](https://github.com/kresimirko/kikipnt/raw/dev/screenshots/latest.png) |
 | --- |
 | [kikipnt](https://kresimirko.github.io/kikipnt/#/) ([source code](https://github.com/kresimirko/kikipnt)) |
 
