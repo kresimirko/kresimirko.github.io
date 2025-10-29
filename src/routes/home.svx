@@ -14,7 +14,7 @@
 
 ## [Userstyles](https://github.com/kresimirko/userstyles) for [Stylus](https://add0n.com/stylus.html)
 
-### Catppuccin
+### [Catppuccin](https://catppuccin.com/palette/)
 
 | ![FESB Raspored & Nastava]({s_fesbrasp}) |
 | --- |
