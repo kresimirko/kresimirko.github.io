@@ -10,7 +10,17 @@
 
 ---
 
-# Works
+# Current projects
+
+## [Userstyles](https://github.com/kresimirko/userstyles) for [Stylus](https://add0n.com/stylus.html)
+
+### Catppuccin
+
+| ![FESB Raspored & Nastava]({s_fesbrasp}) |
+| --- |
+| [FESB Raspored & Nastava](https://github.com/kresimirko/userstyles/blob/main/styles/catppuccin/fesbrasp/catppuccin.user.css) (not yet finished) |
+
+# Past works
 
 ## School and [EDIT Code School](https://digitalnadalmacija.hr/edit) works
 
@@ -43,18 +53,6 @@
 | ![Srednjovjekovni Trogir]({s_strogir}) |
 | --- |
 | [Srednjovjekovni Trogir](https://helios.com.hr/edit/2020/projekti/trogir03/index.html) |
-
-## Miscellaneous
-
-### Userstyles for [Stylus](https://add0n.com/stylus.html)
-
-[Repository link with all of them](https://github.com/kresimirko/userstyles)
-
-#### Catppuccin
-
-| ![FESB Raspored & Nastava]({s_fesbrasp}) |
-| --- |
-| [FESB Raspored & Nastava](https://github.com/kresimirko/userstyles/blob/main/styles/catppuccin/fesbrasp/catppuccin.user.css) (not yet finished) |
 
 <style>
     img {
