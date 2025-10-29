@@ -1,26 +1,48 @@
+<script lang="ts">
+    import s_fesbrasp from '$lib/assets/screenshots/fesbrasp.png';
+    import s_ktrogira from '$lib/assets/screenshots/ktrogira.png';
+    import s_digitv from '$lib/assets/screenshots/digitv.png';
+    import s_strogir from '$lib/assets/screenshots/strogir.png';
+    import s_bojeml from '$lib/assets/screenshots/bojeml.png';
+</script>
+
+[open GitHub profile](https://github.com/kresimirko)
+
+---
+
 # Works
 
 ## School and [EDIT Code School](https://digitalnadalmacija.hr/edit) works
 
 ### 2023/2024
 
-[Karta gradske jezgre Trogira](https://kresimirko.github.io/karta-trogira/) ([source code](https://github.com/kresimirko/karta-trogira))
+| ![Karta gradske jezgre Trogira]({s_ktrogira}) |
+| --- |
+| [Karta gradske jezgre Trogira](https://kresimirko.github.io/karta-trogira/) ([source code](https://github.com/kresimirko/karta-trogira)) |
 
 ### 2022/2023
 
-[kikipnt](https://kresimirko.github.io/kikipnt/#/) ([source code](https://github.com/kresimirko/kikipnt))
+| ![kikipnt](https://github.com/kresimirko/kikipnt/raw/new/screenshots/latest.png) |
+| --- |
+| [kikipnt](https://kresimirko.github.io/kikipnt/#/) ([source code](https://github.com/kresimirko/kikipnt)) |
 
 ### 2021/2022
 
-[Digitalizacija televizije](https://kresimirko.github.io/digitalizacija-tv/) ([source code](https://github.com/kresimirko/digitalizacija-tv))
+| ![Digitalizacija televizije]({s_digitv}) |
+| --- |
+| [Digitalizacija televizije](https://kresimirko.github.io/digitalizacija-tv/) ([source code](https://github.com/kresimirko/digitalizacija-tv)) |
 
 ### 2020/2021
 
-[Prepoznavanje emocija u slici prema dominantnoj boji](https://helios.com.hr/edit/2021/projekti/p01/index.html)
+| ![Prepoznavanje emocija u slici prema dominantnoj boji]({s_bojeml}) |
+| --- |
+| [Prepoznavanje emocija u slici prema dominantnoj boji](https://helios.com.hr/edit/2021/projekti/p01/index.html) |
 
 ### 2019/2020
 
-[Srednjovjekovni Trogir](https://helios.com.hr/edit/2020/projekti/trogir03/index.html)
+| ![Srednjovjekovni Trogir]({s_strogir}) |
+| --- |
+| [Srednjovjekovni Trogir](https://helios.com.hr/edit/2020/projekti/trogir03/index.html) |
 
 ## Miscellaneous
 
@@ -30,4 +52,12 @@
 
 #### Catppuccin
 
-[FESB Raspored](https://github.com/kresimirko/userstyles/blob/main/styles/catppuccin/fesbrasp/catppuccin.user.css) (not yet finished)
+| ![FESB Raspored & Nastava]({s_fesbrasp}) |
+| --- |
+| [FESB Raspored & Nastava](https://github.com/kresimirko/userstyles/blob/main/styles/catppuccin/fesbrasp/catppuccin.user.css) (not yet finished) |
+
+<style>
+    img {
+        max-width: 30rem;
+    }
+</style>
