@@ -28,6 +28,14 @@ a maintained version of "kikipnt", listed below
 | --- |
 | [FESB Raspored & Nastava](https://github.com/kresimirko/userstyles/blob/main/styles/catppuccin/fesbrasp/catppuccin.user.css) (not yet finished) |
 
+## [Snippets](https://kresimirko.github.io/snippets/)
+
+Various small tools and websites.
+
+### [cLoze](https://kresimirko.github.io/snippets/cloze/)
+
+A lazy cloze test generator written in pure vanilla JS.
+
 # Past works
 
 ## School and [EDIT Code School](https://digitalnadalmacija.hr/edit) works
