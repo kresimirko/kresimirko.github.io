@@ -95,7 +95,7 @@
 	}
 
 	#pfp {
-		border-radius: 100% 100% 25% 100%;
+		border-radius: 25%;
 		max-width: 16rem;
 	}
 
