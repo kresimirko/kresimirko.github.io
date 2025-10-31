@@ -19,7 +19,7 @@
 </div>
 
 <div id="header">
-	<img id="pfp" alt="GitHub profile picture - my pet dog, Gina" src="https://avatars.githubusercontent.com/u/104278083">
+	<img id="pfp" alt="My GitHub profile picture" src="https://avatars.githubusercontent.com/u/104278083">
 	<div id="headerText">
 		<h1>kresimirko</h1>
 		<h2>Luka Krešimir Mihovilović</h2>
